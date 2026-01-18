@@ -1,0 +1,31 @@
+@font-face {
+  font-family: 'PlusJakartaSans-Regular';
+  src: url('/src/assets/fonts/PlusJakartaSans-Regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'PlusJakartaSans-Bold';
+  src: url('/src/assets/fonts/PlusJakartaSans-Bold.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'PlusJakartaSans-SemiBold';
+  src: url('/src/assets/fonts/PlusJakartaSans-SemiBold.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'KronaOne-Regular';
+  src: url('/src/assets/fonts/KronaOne-Regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'PressStart2P-Regular';
+  src: url('/src/assets/fonts/PressStart2P-Regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'VT323-Regular';
+  src: url('/src/assets/fonts/VT323-Regular.ttf') format('truetype');
+}
+
+@import "tailwindcss";

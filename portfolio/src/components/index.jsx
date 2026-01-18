@@ -1,0 +1,16 @@
+export { default as AngularLogo } from "./AngularLogo";
+export { default as BootstrapLogo } from "./BootstrapLogo";
+export { default as CssLogo } from "./CssLogo";
+export { default as GitHubLogo } from "./GitHubLogo";
+export { default as HtmlLogo } from "./HtmlLogo";
+export { default as JavaLogo } from "./JavaLogo";
+export { default as JsLogo } from "./JsLogo";
+export { default as LinkedInLogo } from "./LinkedInLogo";
+export { default as MysqlLogo } from "./MysqlLogo";
+export { default as NodejsLogo } from "./NodejsLogo";
+export { default as PhpLogo } from "./PhpLogo";
+export { default as PythonLogo } from "./PythonLogo";
+export { default as ReactLogo } from "./ReactLogo";
+export { default as ScssLogo } from "./ScssLogo";
+export { default as TailwindLogo } from "./TailwindLogo";
+export { default as TypescriptLogo } from "./TypescriptLogo";
