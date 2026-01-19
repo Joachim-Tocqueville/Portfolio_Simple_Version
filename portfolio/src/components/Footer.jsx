@@ -14,7 +14,7 @@ function Footer() {
           <div className="grid grid-cols-2 content-center">
             <div className="h-15 mb-8">
               <a href="https://github.com/Joachim-Tocqueville">
-                <GitHubLogo className="w-10 h-10 inline ml-11 mr-10"/>
+                <GitHubLogo className="w-10 h-10 inline ml-11 mr-10" fill="#EDF2F4"/>
                 <span className="font-['PlusJakartaSans-Regular'] text-[1.1rem] align-middle">Joachim-Tocqueville</span>
               </a>
             </div>
