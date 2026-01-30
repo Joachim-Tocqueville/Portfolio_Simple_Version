@@ -23,48 +23,48 @@ function Footer() {
   };
 
   return (
-    <div className="grid gap-15 mt-5 text-center text-[#EDF2F4] bg-linear-to-b from-[#251949] to-[#2D327D]">
-      <div className="mx-155">
-        <div className="font-['PlusJakartaSans-Regular'] text-[1.875rem]">Une idée de projet ? Discutons-en !</div>
+    <div className="grid gap-10 md:gap-15 mt-5 text-center text-[#EDF2F4] bg-linear-to-b from-[#251949] to-[#2D327D] pb-5">
+      <div className="mx-6 md:mx-20 lg:mx-40 xl:mx-155">
+        <div className="font-['PlusJakartaSans-Regular'] text-[1.5rem] md:text-[1.875rem]">Une idée de projet ? Discutons-en !</div>
         <hr className="border-t-3 border-[#EDF2F4]" />
       </div>
-      <div className="grid grid-cols-2">
-        <div className="grid grid-cols-2 content-center">
-          <div className="h-15 mb-8">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-0">
+        <div className="grid grid-cols-1 sm:grid-cols-2 content-center gap-y-8 md:gap-y-0 text-center">
+          <div className="h-15 mb-0 md:mb-8">
             <a href="https://github.com/Joachim-Tocqueville" target="_blank" rel="noopener noreferrer">
-              <GitHubLogo className="w-10 h-10 inline ml-11 mr-10" fill="#EDF2F4" />
-              <span className="font-['PlusJakartaSans-Regular'] text-[1.1rem] align-middle">Joachim-Tocqueville</span>
+              <GitHubLogo className="w-10 h-10 inline md:ml-11 mr-4 md:mr-10" fill="#EDF2F4" />
+              <span className="font-['PlusJakartaSans-Regular'] text-[1rem] md:text-[1.1rem] align-middle">Joachim-Tocqueville</span>
             </a>
           </div>
           <div className="h-15">
             <a href="tel:0784912084" target="_blank" rel="noopener noreferrer">
-              <FaPhoneAlt className="w-10 h-10 inline mr-10" />
-              <span className="font-['PlusJakartaSans-Regular'] text-[1.1rem] mr-30 align-middle">07.84.91.20.84</span>
+              <FaPhoneAlt className="w-10 h-10 inline mr-4 md:mr-10" />
+              <span className="font-['PlusJakartaSans-Regular'] text-[1rem] md:text-[1.1rem] md:mr-30 align-middle">07.84.91.20.84</span>
             </a>
           </div>
           <div className="h-15">
             <a href="https://www.linkedin.com/in/joachim-tocqueville-1356b2339/" target="_blank" rel="noopener noreferrer">
-              <LinkedInLogo className="w-10 h-10 inline mx-10" />
-              <span className="font-['PlusJakartaSans-Regular'] text-[1.1rem] align-middle">Joachim Tocqueville</span>
+              <LinkedInLogo className="w-10 h-10 inline mx-4 md:mx-10" />
+              <span className="font-['PlusJakartaSans-Regular'] text-[1rem] md:text-[1.1rem] align-middle">Joachim Tocqueville</span>
             </a>
           </div>
           <div className="h-15">
             <a href="mailto:joachim.tocqueville@gmail.com" target="_blank" rel="noopener noreferrer">
-              <IoMail className="w-11 h-11 inline ml-5 mr-10" />
-              <span className="font-['PlusJakartaSans-Regular'] text-[1.1rem] align-middle">joachim.tocqueville@gmail.com</span>
+              <IoMail className="w-11 h-11 inline ml-0 md:ml-5 mr-4 md:mr-10" />
+              <span className="font-['PlusJakartaSans-Regular'] text-[1rem] md:text-[1.1rem] align-middle">joachim.tocqueville@gmail.com</span>
             </a>
           </div>
         </div>
-        <form onSubmit={handleSubmit} onChange={handleChange} className="grid gap-5 px-50">
-          <div className="grid grid-cols-2 gap-10">
-            <input type="text" name="nom" placeholder="Votre nom" className="border-[#EDF2F4] border-3 outline-none p-2 w-full text-[1.1rem]" required />
-            <input type="email" name="email" placeholder="Votre e-mail" className="border-[#EDF2F4] border-3 outline-none p-2 w-full text-[1.1rem]" required />
+        <form onSubmit={handleSubmit} onChange={handleChange} className="grid gap-5 px-6 md:px-12 lg:px-24 xl:px-50">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 md:gap-10">
+            <input type="text" name="nom" placeholder="Votre nom" className="border-[#EDF2F4] border-3 outline-none p-2 w-full text-[1rem] md:text-[1.1rem]" required />
+            <input type="email" name="email" placeholder="Votre e-mail" className="border-[#EDF2F4] border-3 outline-none p-2 w-full text-[1rem] md:text-[1.1rem]" required />
           </div>
-          <textarea name="message" placeholder="Votre message" className="border-[#EDF2F4] border-3 outline-none p-2 h-40 align-top text-[1.1rem]" required />
-          <button className="border-[#EDF2F4] border-3 p-2 ml-50 rounded-3xl cursor-pointer text-[1.1rem]">Envoyer</button>
+          <textarea name="message" placeholder="Votre message" className="border-[#EDF2F4] border-3 outline-none p-2 h-40 align-top text-[1rem] md:text-[1.1rem]" required />
+          <button className="border-[#EDF2F4] border-3 p-2 ml-0 sm:ml-20 md:ml-30 lg:ml-50 rounded-3xl cursor-pointer text-[1rem] md:text-[1.1rem] w-full sm:w-auto self-center sm:self-auto">Envoyer</button>
         </form>
       </div>
-      <div className="font-['PlusJakartaSans-Regular'] text-[1.1rem] mb-2">© Joachim Tocqueville</div>
+      <div className="font-['PlusJakartaSans-Regular'] text-[0.9rem] md:text-[1.1rem] mb-2">© Joachim Tocqueville</div>
     </div>
   )
 }
