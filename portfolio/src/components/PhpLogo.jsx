@@ -1,10 +1,11 @@
 import * as React from "react";
-const SvgPhpLogo = (props) => (
+const PhpLogo = (props) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     xmlSpace="preserve"
     width={711.201}
     height={383.598}
+    viewBox="0 0 711.201 383.598"
     {...props}
   >
     <defs>
@@ -152,4 +153,4 @@ const SvgPhpLogo = (props) => (
     </g>
   </svg>
 );
-export default SvgPhpLogo;
+export default PhpLogo;
