@@ -29,7 +29,7 @@ import PostmanLogo from '../components/PostmanLogo';
 import TrelloLogo from '../components/TrelloLogo';
 import AcrobatLogo from '../components/AcrobatLogo';
 import UnityLogo from '../components/UnityLogo';
-import GitlabLogo from '../components/GitlabLogo';
+import GitLabLogo from '../components/GitLabLogo';
 import CanvaLogo from '../components/CanvaLogo';
 import ChartJsLogo from '../components/ChartJsLogo';
 import GoogleLogo from '../components/GoogleLogo';
@@ -290,7 +290,7 @@ function Apropos() {
             </div>
           </div>
           <div className="w-16 hover:scale-110 transition-transform cursor-pointer content-center">
-            <GitlabLogo className="w-16 h-16" />
+            <GitLabLogo className="w-16 h-16" />
           </div>
           <div className="w-60 flex flex-wrap justify-center gap-20">
             <div className="w-16 hover:scale-110 transition-transform cursor-pointer content-center" style={{ transform: 'rotate(10deg)' }}>
