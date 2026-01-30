@@ -1,7 +1,7 @@
 import React from 'react';
 import Card_projet from "../components/Card_projet";
 import Modal_projet from "../components/Modal_projet";
-import dataProjets from "../datas_projets/Dataprojets";
+import DataProjets from "../datas_projets/Dataprojets";
 import { Box, CardContent, Typography } from '@mui/material';
 import { IoIosArrowForward, IoIosArrowBack } from "react-icons/io";
 import { Splide, SplideTrack, SplideSlide } from '@splidejs/react-splide';
@@ -16,7 +16,7 @@ function Projets() {
 
   React.useEffect(() => {
     if (location.state?.projectToOpenId) {
-      const project = dataProjets.find(p => p.id === location.state.projectToOpenId);
+      const project = DataProjets.find(p => p.id === location.state.projectToOpenId);
       if (project) {
         setSelectedProject(project);
         setOpen(true);
@@ -32,9 +32,9 @@ function Projets() {
 
   const handleClose = () => setOpen(false);
 
-  const frontProjets = dataProjets.filter((projet) => projet.categorie === "Front");
-  const fullstackProjets = dataProjets.filter((projet) => projet.categorie === "Fullstack");
-  const designProjets = dataProjets.filter((projet) => projet.categorie === "Design");
+  const frontProjets = DataProjets.filter((projet) => projet.categorie === "Front");
+  const fullstackProjets = DataProjets.filter((projet) => projet.categorie === "Fullstack");
+  const designProjets = DataProjets.filter((projet) => projet.categorie === "Design");
 
   return (
     <>

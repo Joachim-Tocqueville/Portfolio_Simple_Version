@@ -1,4 +1,4 @@
-import dataProjets from "../datas_projets/Dataprojets";
+import DataProjets from "../datas_projets/Dataprojets";
 import { Box, CardContent, Typography, Button, CardMedia } from '@mui/material';
 import { IoIosArrowForward, IoIosArrowBack } from "react-icons/io";
 import { Splide, SplideTrack, SplideSlide } from '@splidejs/react-splide';
@@ -14,9 +14,9 @@ function Accueil() {
   };
 
   const featuredProjects = [
-    dataProjets.find(p => p.id === 1),
-    dataProjets.find(p => p.id === 4),
-    dataProjets.find(p => p.id === 5)
+    DataProjets.find(p => p.id === 1),
+    DataProjets.find(p => p.id === 4),
+    DataProjets.find(p => p.id === 5)
   ].filter(p => !!p);
 
   return (
