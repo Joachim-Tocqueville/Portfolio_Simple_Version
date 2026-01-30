@@ -46,7 +46,7 @@ const dataProjets = [
         categorie: "Front",
         rôle: "Développeur frontend et webdesigner",
         liens: {
-            site: "https://sunny-starlight-5b7c49.netlify.app",
+            site: "https://acf2l-refonte.netlify.app",
             code: "https://github.com/BouquetEthan/ACF2L",
             maquettes: "https://www.figma.com/design/4azAUMbl7HO3hfm9dmvNH3/ACF2L?node-id=0-1&t=y3pPPQehgW0qrPqe-1",
         },
