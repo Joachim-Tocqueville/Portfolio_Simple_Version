@@ -5,9 +5,17 @@ import DataProjets from "../datas_projets/Dataprojets";
 import { Box, CardContent, Typography } from '@mui/material';
 import { IoIosArrowForward, IoIosArrowBack } from "react-icons/io";
 import { Splide, SplideTrack, SplideSlide } from '@splidejs/react-splide';
+import { useLocation } from 'react-router-dom';
 import '@splidejs/react-splide/css/core';
 
-import { useLocation } from 'react-router-dom';
+const splideStyles = `
+  @media (min-width: 768px) {
+    .splide-centered .splide__list {
+      justify-content: center !important;
+      padding-top: 1rem !important;
+    }
+  }
+`;
 
 function Projets() {
   const [open, setOpen] = React.useState(false);
@@ -38,133 +46,109 @@ function Projets() {
 
   return (
     <>
-      <h1 className="font-['KronaOne-Regular'] text-[#EDF2F4] text-[1.5rem] mt-20 mb-5">Voici mes projets :</h1>
-      <div className="font-['PlusJakartaSans-Regular'] text-[#EDF2F4] text-[1.1rem] mx-117">
+      <style>{splideStyles}</style>
+      <h1 className="font-['KronaOne-Regular'] text-[#EDF2F4] text-[1.2rem] md:text-[1.5rem] mt-10 md:mt-20 mb-5 px-4 md:px-0 text-center md:text-center">Voici mes projets :</h1>
+      <div className="font-['PlusJakartaSans-Regular'] text-[#EDF2F4] text-[0.95rem] md:text-[1.1rem] px-6 md:mx-117 text-center md:text-center">
         De chez moi à mon université, j'ai eu l'occasion de créer et/ou participer à différents projets.
         Des sites et des designs web et graphiques. Autant de projets que de compétences acquises (ou presque).
       </div>
 
-      <Box className="w-full relative mt-25">
-        <CardContent className="">
-          <Typography component="div" variant="h4" className="absolute pl-10 font-['KronaOne-Regular']! text-[#EDF2F4] text-[1.2rem]!">
-            Front :
-          </Typography>
-        </CardContent>
+      <Box className="w-full relative mt-16 md:mt-25">
+        <Typography component="h2" variant="h4" className="md:pl-10 font-['KronaOne-Regular']! text-[#EDF2F4] text-[1.5rem]! text-center md:text-[1.2rem]! md:text-left mb-4 md:mb-0 md:absolute">
+          Front :
+        </Typography>
       </Box>
       <Splide hasTrack={false} options={{
-        type: (frontProjets.length > 5) ? "loop" : "slide",
+        type: 'slide',
         gap: '1rem',
-        perPage: 1,
-        arrows: (frontProjets.length > 5) ? true : false,
-        drag: (frontProjets.length > 5) ? true : false,
+        perPage: 5,
+        perMove: 1,
+        arrows: frontProjets.length > 5,
+        drag: frontProjets.length > 1,
         pagination: false,
-      }} className="h-100 mb-25 text-white overflow-x-clip overflow-y-visible">
-        <SplideTrack className="overflow-visible!">
-          {(frontProjets.length > 0) && (<SplideSlide className="flex h-100 my-30">
-            <Box className="w-full h-full flex gap-20 absolute items-center justify-center">
-              {frontProjets.slice(0, 5).map((projet) => (
-                <Card_projet key={projet.id} dataProjets={projet} onClick={() => handleOpen(projet)} context="projets" />
-              ))}
-            </Box>
-          </SplideSlide>)}
-          {(frontProjets.length > 5) && (<SplideSlide className="flex h-100 my-30">
-            <Box className="w-full h-full flex gap-20 absolute items-center justify-center">
-              {frontProjets.slice(5, 10).map((projet) => (
-                <Card_projet key={projet.id} dataProjets={projet} onClick={() => handleOpen(projet)} context="projets" />
-              ))}
-            </Box>
-          </SplideSlide>)}
+        breakpoints: {
+          1280: { perPage: 4 },
+          1024: { perPage: 3 },
+          768: { perPage: 1, focus: 'center', arrows: frontProjets.length > 1 },
+        }
+      }} className="splide-centered h-auto md:h-100 mb-16 md:mb-25 text-white overflow-x-clip md:overflow-visible py-8 md:my-30 md:px-16">
+        <SplideTrack className="md:overflow-visible!">
+          {frontProjets.map((projet) => (
+            <SplideSlide key={projet.id} className="flex justify-center items-center">
+              <Card_projet dataProjets={projet} onClick={() => handleOpen(projet)} context="projets" />
+            </SplideSlide>
+          ))}
         </SplideTrack>
-
-        {(frontProjets.length > 5) && (<div className="splide__arrows w-full h-full absolute top-0 z-10 flex grow justify-between items-center pointer-events-none">
-          <IoIosArrowBack className="splide__arrow splide__arrow--prev h-15 w-15 cursor-pointer fill-[#EDF2F4] shrink-0 top-5 left-0 z-10 pointer-events-auto" />
-          <IoIosArrowForward className="splide__arrow splide__arrow--next h-15 w-15 cursor-pointer fill-[#EDF2F4] shrink-0 bottom-0 right-0 z-10 pointer-events-auto" />
-        </div>)}
+        <div className="splide__arrows">
+          <IoIosArrowBack className="splide__arrow splide__arrow--prev h-15 w-15 cursor-pointer fill-[#EDF2F4] shrink-0 absolute left-0 top-1/2 -translate-y-1/2 z-10" />
+          <IoIosArrowForward className="splide__arrow splide__arrow--next h-15 w-15 cursor-pointer fill-[#EDF2F4] shrink-0 absolute right-0 top-1/2 -translate-y-1/2 z-10" />
+        </div>
       </Splide>
 
-      <Box className="w-full relative">
-        <CardContent className="">
-          <Typography component="div" variant="h4" className="absolute pl-10 font-['KronaOne-Regular']! text-[#EDF2F4] text-[1.2rem]!">
-            Fullstack :
-          </Typography>
-        </CardContent>
+      <Box className="w-full relative mt-8 md:mt-0">
+        <Typography component="h2" variant="h4" className="md:pl-10 font-['KronaOne-Regular']! text-[#EDF2F4] text-[1.5rem]! text-center md:text-[1.2rem]! md:text-left mb-4 md:mb-0 md:absolute">
+          Fullstack :
+        </Typography>
       </Box>
       <Splide hasTrack={false} options={{
-        type: (fullstackProjets.length > 5) ? "loop" : "slide",
+        type: 'slide',
         gap: '1rem',
-        perPage: 1,
-        arrows: (fullstackProjets.length > 5) ? true : false,
-        drag: (fullstackProjets.length > 5) ? true : false,
+        perPage: 5,
+        perMove: 1,
+        arrows: fullstackProjets.length > 5,
+        drag: fullstackProjets.length > 1,
         pagination: false,
-      }} className="h-100 mb-25 text-white overflow-x-clip overflow-y-visible">
-        <SplideTrack className="overflow-visible!">
-          {(fullstackProjets.length > 0) && (<SplideSlide className="flex h-100 my-30">
-            <Box className="w-full h-full flex gap-20 absolute items-center justify-center">
-              {
-                fullstackProjets.slice(0, 5).map((projet) => (
-                  <Card_projet key={projet.id} dataProjets={projet} onClick={() => handleOpen(projet)} context="projets" />
-                ))
-              }
-            </Box>
-          </SplideSlide>)}
-          {(fullstackProjets.length > 5) && (<SplideSlide className="flex h-100 my-30">
-            <Box className="w-full h-full flex gap-20 absolute items-center justify-center">
-              {
-                fullstackProjets.slice(5, 10).map((projet) => (
-                  <Card_projet key={projet.id} dataProjets={projet} onClick={() => handleOpen(projet)} context="projets" />
-                ))
-              }
-            </Box>
-          </SplideSlide>)}
+        breakpoints: {
+          1280: { perPage: 4 },
+          1024: { perPage: 3 },
+          768: { perPage: 1, focus: 'center', arrows: fullstackProjets.length > 1 },
+        }
+      }} className="splide-centered h-auto md:h-100 mb-16 md:mb-25 text-white overflow-x-clip md:overflow-visible py-8 md:my-30 md:px-16">
+        <SplideTrack className="md:overflow-visible!">
+          {fullstackProjets.map((projet) => (
+            <SplideSlide key={projet.id} className="flex justify-center items-center">
+              <Card_projet dataProjets={projet} onClick={() => handleOpen(projet)} context="projets" />
+            </SplideSlide>
+          ))}
         </SplideTrack>
-
-        {(fullstackProjets.length > 5) && (<div className="splide__arrows w-full h-full absolute top-0 z-10 flex grow justify-between items-center pointer-events-none">
-          <IoIosArrowBack className="splide__arrow splide__arrow--prev h-15 w-15 cursor-pointer fill-[#EDF2F4] shrink-0 top-5 left-0 z-10 pointer-events-auto" />
-          <IoIosArrowForward className="splide__arrow splide__arrow--next h-15 w-15 cursor-pointer fill-[#EDF2F4] shrink-0 bottom-0 right-0 z-10 pointer-events-auto" />
-        </div>)}
+        <div className="splide__arrows">
+          <IoIosArrowBack className="splide__arrow splide__arrow--prev h-15 w-15 cursor-pointer fill-[#EDF2F4] shrink-0 absolute left-0 top-1/2 -translate-y-1/2 z-10" />
+          <IoIosArrowForward className="splide__arrow splide__arrow--next h-15 w-15 cursor-pointer fill-[#EDF2F4] shrink-0 absolute right-0 top-1/2 -translate-y-1/2 z-10" />
+        </div>
       </Splide>
 
-      <Box className="w-full relative">
-        <CardContent className="">
-          <Typography component="div" variant="h4" className="absolute pl-10 font-['KronaOne-Regular']! text-[#EDF2F4] text-[1.2rem]!">
-            Design :
-          </Typography>
-        </CardContent>
+      <Box className="w-full relative mt-8 md:mt-0">
+        <Typography component="h2" variant="h4" className="md:pl-10 font-['KronaOne-Regular']! text-[#EDF2F4] text-[1.5rem]! text-center md:text-[1.2rem]! md:text-left mb-4 md:mb-0 md:absolute">
+          Design :
+        </Typography>
       </Box>
       <Splide hasTrack={false} options={{
-        type: (designProjets.length > 5) ? "loop" : "slide",
+        type: 'slide',
         gap: '1rem',
-        perPage: 1,
-        arrows: (designProjets.length > 5) ? true : false,
-        drag: (designProjets.length > 5) ? true : false,
+        perPage: 5,
+        perMove: 1,
+        arrows: designProjets.length > 5,
+        drag: designProjets.length > 1,
         pagination: false,
-      }} className="h-100 mb-25 text-white overflow-x-clip overflow-y-visible">
-        <SplideTrack className="overflow-visible!">
-          {(designProjets.length > 0) && (<SplideSlide className="flex h-100 my-30">
-            <Box className="w-full h-full flex gap-20 absolute items-center justify-center">
-              {
-                designProjets.slice(0, 5).map((projet) => (
-                  <Card_projet key={projet.id} dataProjets={projet} onClick={() => handleOpen(projet)} context="projets" />
-                ))
-              }
-            </Box>
-          </SplideSlide>)}
-          {(designProjets.length > 5) && (<SplideSlide className="flex h-100 my-30">
-            <Box className="w-full h-full flex gap-20 absolute items-center justify-center">
-              {
-                designProjets.slice(5, 10).map((projet) => (
-                  <Card_projet key={projet.id} dataProjets={projet} onClick={() => handleOpen(projet)} context="projets" />
-                ))
-              }
-            </Box>
-          </SplideSlide>)}
+        breakpoints: {
+          1280: { perPage: 4 },
+          1024: { perPage: 3 },
+          768: { perPage: 1, focus: 'center', arrows: designProjets.length > 1 },
+        }
+      }} className="splide-centered h-auto md:h-100 mb-16 md:mb-25 text-white overflow-x-clip md:overflow-visible py-8 md:my-30 md:px-16">
+        <SplideTrack className="md:overflow-visible!">
+          {designProjets.map((projet) => (
+            <SplideSlide key={projet.id} className="flex justify-center items-center">
+              <Card_projet dataProjets={projet} onClick={() => handleOpen(projet)} context="projets" />
+            </SplideSlide>
+          ))}
         </SplideTrack>
-
-        {(designProjets.length > 5) && (<div className="splide__arrows w-full h-full absolute top-0 z-10 flex grow justify-between items-center pointer-events-none">
-          <IoIosArrowBack className="splide__arrow splide__arrow--prev h-15 w-15 cursor-pointer fill-[#EDF2F4] shrink-0 top-5 left-0 z-10 pointer-events-auto" />
-          <IoIosArrowForward className="splide__arrow splide__arrow--next h-15 w-15 cursor-pointer fill-[#EDF2F4] shrink-0 bottom-0 right-0 z-10 pointer-events-auto" />
-        </div>)}
+        <div className="splide__arrows">
+          <IoIosArrowBack className="splide__arrow splide__arrow--prev h-15 w-15 cursor-pointer fill-[#EDF2F4] shrink-0 absolute left-0 top-1/2 -translate-y-1/2 z-10" />
+          <IoIosArrowForward className="splide__arrow splide__arrow--next h-15 w-15 cursor-pointer fill-[#EDF2F4] shrink-0 absolute right-0 top-1/2 -translate-y-1/2 z-10" />
+        </div>
       </Splide>
+
       <Modal_projet open={open} handleClose={handleClose} project={selectedProject} />
     </>
   )

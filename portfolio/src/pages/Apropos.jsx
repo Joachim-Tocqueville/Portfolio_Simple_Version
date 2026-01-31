@@ -61,14 +61,15 @@ function Apropos() {
 
   return (
     <div className="text-[#EDF2F4]">
-      <div className="mt-40 px-10 max-w-7xl *mx-auto* relative group/v2">
-        <h2 className="font-['KronaOne-Regular'] text-[1.2rem] absolute -top-10 left-50">Parcours :</h2>
+      <div className="mt-10 md:mt-40 mr-[1rem] md:px-10 max-w-7xl *mx-auto* relative group/v2">
+        <h2 className="font-['KronaOne-Regular'] text-[1.2rem] text-center mb-8 md:absolute md:mb-0 md:-top-10 md:left-50">Parcours :</h2>
 
-        <div className="relative w-full ml-[10rem]">
-          <div className="absolute -top-60 lg:-top-90 -left-10 lg:-left-40 w-96 lg:w-[45rem] -ml-[10rem] rotate-y-180 z-10 pointer-events-none">
+        <div className="relative w-full flex flex-col md:block md:ml-[10rem]">
+          <div className="absolute w-80 mx-auto md:w-96 lg:w-[45rem] -top-60 md:-top-60 md:lg:-top-90 left-0.5 md:left-auto md:right-auto md:-left-10 md:lg:-left-40 md:-ml-[10rem] rotate-y-180 scale-110 z-10 pointer-events-none -mb-8 md:mb-0 flex justify-center md:block">
             <img className="w-full h-auto object-contain" src={CerveauPixelise} alt="Cerveau pixelisé" />
           </div>
-          <div className="grid grid-cols-4 w-full text-[#EDF2F4] font-['VT323-Regular'] pt-24">
+
+          <div className="flex flex-col md:grid md:grid-cols-4 gap-0 w-full text-[#EDF2F4] font-['VT323-Regular'] pt-4 md:pt-24">
             <svg width="0" height="0" className="absolute" aria-hidden="true">
               <defs>
                 <pattern id="pixelGridV2" width="8" height="8" patternUnits="userSpaceOnUse">
@@ -81,11 +82,11 @@ function Apropos() {
               </defs>
             </svg>
 
-            <div className="flex flex-col items-center w-full relative group">
-              <div className="h-32 flex items-end text-[2rem] lg:text-[2.2rem] text-center items-baseline! leading-none mb-8">Brevet</div>
-              <div className="w-full h-17! lg:h-26 drop-shadow-[0_0_15px_rgba(255,255,255,0.3)] hover:drop-shadow-[0_0_25px_rgba(255,255,255,0.6)] transition-all">
-                <a href="https://www.college-la-rochefoucauld77.fr" target="_blank" rel="noopener noreferrer">
-                  <svg width="100%" height="100%" viewBox="0 0 200 60" preserveAspectRatio="none" className="overflow-visible">
+            <div className="flex flex-row md:flex-col items-center justify-center md:justify-start w-full relative group pointer-events-none">
+              <div className="order-3 md:order-none w-1/3 md:w-full text-[1.5rem] md:h-32 md:flex md:items-end md:text-[2rem] lg:text-[2.2rem] justify-center md:text-center md:items-baseline! leading-none mb-0 md:mb-8 pl-4 md:pl-0 pointer-events-auto">Brevet</div>
+              <div className="order-2 md:order-none w-20 h-60 md:w-full md:h-17! lg:h-26 rotate-90 md:rotate-0 flex md:block justify-center items-center drop-shadow-[0_0_15px_rgba(255,255,255,0.3)] hover:drop-shadow-[0_0_25px_rgba(255,255,255,0.6)] transition-all md:mt-0 pointer-events-auto">
+                <a href="https://www.college-la-rochefoucauld77.fr" target="_blank" rel="noopener noreferrer" className="block w-60 h-16 md:w-full md:h-full">
+                  <svg width="100%" height="100%" viewBox="0 0 200 60" preserveAspectRatio="none" className="overflow-visible w-[11rem] md:w-full">
                     <defs>
                       <clipPath id="clipBrevet">
                         <rect x="0" y="0" width={animate ? 200 : 0} height="60" style={{ transition: 'width 1000ms ease-in-out' }} />
@@ -98,14 +99,14 @@ function Apropos() {
                   </svg>
                 </a>
               </div>
-              <div className="text-[2.2rem] lg:text-[2.8rem] mt-8">2019</div>
+              <div className="order-1 md:order-none w-1/3 md:w-full text-[1.5rem] md:text-[2.2rem] lg:text-[2.8rem] text-right md:text-center mt-0 md:mt-8 pr-4 md:pr-0 pointer-events-auto">2019</div>
             </div>
 
-            <div className="flex flex-col items-center w-full relative group">
-              <div className="h-32 flex items-end text-[2rem] lg:text-[2.2rem] text-center items-baseline! leading-none mb-8">Bac STI2D<br />option SIN</div>
-              <div className="w-full h-17! lg:h-26 drop-shadow-[0_0_15px_rgba(255,255,255,0.3)] hover:drop-shadow-[0_0_25px_rgba(255,255,255,0.6)] transition-all">
-                <a href="https://www.larmand.fr" target="_blank" rel="noopener noreferrer">
-                  <svg width="100%" height="100%" viewBox="0 0 200 60" preserveAspectRatio="none" className="overflow-visible">
+            <div className="flex flex-row md:flex-col items-center justify-center md:justify-start w-full relative group -mt-25.5 md:mt-0 pointer-events-none">
+              <div className="order-3 md:order-none w-1/3 md:w-full text-[1.5rem] md:h-32 md:flex md:items-end md:text-[2rem] lg:text-[2.2rem] justify-center md:text-center items-baseline! leading-none mb-0 md:mb-8 pl-4 md:pl-0 pointer-events-auto">Bac STI2D<br className="hidden md:block" /> option SIN</div>
+              <div className="order-2 md:order-none w-20 h-60 md:w-full md:h-17! lg:h-26 rotate-90 md:rotate-0 flex md:block justify-center items-center drop-shadow-[0_0_15px_rgba(255,255,255,0.3)] hover:drop-shadow-[0_0_25px_rgba(255,255,255,0.6)] transition-all pointer-events-auto">
+                <a href="https://www.larmand.fr" target="_blank" rel="noopener noreferrer" className="block w-60 h-16 md:w-full md:h-full">
+                  <svg width="100%" height="100%" viewBox="0 0 200 60" preserveAspectRatio="none" className="overflow-visible w-[6rem] md:w-full">
                     <defs>
                       <clipPath id="clipBac">
                         <rect x="0" y="0" width={animate ? 200 : 0} height="60" style={{ transition: 'width 1000ms ease-in-out', transitionDelay: '800ms' }} />
@@ -118,16 +119,16 @@ function Apropos() {
                   </svg>
                 </a>
               </div>
-              <div className="text-[2.2rem] lg:text-[2.8rem] mt-8">2022</div>
+              <div className="order-1 md:order-none w-1/3 md:w-full text-[1.5rem] md:text-[2.2rem] lg:text-[2.8rem] text-right md:text-center mt-0 md:mt-8 pr-4 md:pr-0 pointer-events-auto">2022</div>
             </div>
 
-            <div className="flex flex-col items-center w-full relative group">
-              <div className="h-32 flex items-end justify-center text-[2rem]! lg:text-[2.2rem] text-center leading-tight mb-8 w-full">
-                BUT MMI parcours<br />développement web<br />et dispositifs<br />interactifs
+            <div className="flex flex-row md:flex-col h-[25rem] items-center justify-center md:justify-start w-full relative group -mt-37.5 md:mt-0 pointer-events-none">
+              <div className="order-3 md:order-none w-1/3 md:w-full text-[1.5rem] md:h-32 md:flex md:items-end md:justify-center md:text-[2rem] lg:text-[2.2rem] justify-center md:text-center leading-tight mb-0 md:mb-8 pl-4 md:pl-0 pointer-events-auto">
+                BUT MMI parcours<br />développement web et<br />dispositifs<br />interactifs
               </div>
-              <div className="w-full h-17! lg:h-26 drop-shadow-[0_0_15px_rgba(255,255,255,0.3)] hover:drop-shadow-[0_0_25px_rgba(255,255,255,0.6)] transition-all">
-                <a href="https://iut.univ-gustave-eiffel.fr" target="_blank" rel="noopener noreferrer">
-                  <svg width="100%" height="100%" viewBox="0 0 200 60" preserveAspectRatio="none" className="overflow-visible">
+              <div className="order-2 md:order-none w-20 h-60 md:w-full md:h-17! lg:h-26 rotate-90 md:rotate-0 flex md:block justify-center items-center drop-shadow-[0_0_15px_rgba(255,255,255,0.3)] hover:drop-shadow-[0_0_25px_rgba(255,255,255,0.6)] transition-all pointer-events-auto">
+                <a href="https://iut.univ-gustave-eiffel.fr" target="_blank" rel="noopener noreferrer" className="block w-60 h-16 md:w-full md:h-full">
+                  <svg width="100%" height="100%" viewBox="0 0 200 60" preserveAspectRatio="none" className="overflow-visible w-[15rem] md:w-full">
                     <defs>
                       <clipPath id="clipMMI">
                         <rect x="0" y="0" width={animate ? 100 : 0} height="60" style={{ transition: 'width 1000ms ease-in-out', transitionDelay: '1600ms' }} />
@@ -140,186 +141,186 @@ function Apropos() {
                   </svg>
                 </a>
               </div>
-              <div className="text-[2.2rem] lg:text-[2.8rem] mt-8">
+              <div className="order-1 md:order-none w-1/3 md:w-full text-[1.5rem] md:text-[2.2rem] lg:text-[2.8rem] text-center md:text-center mt-0 md:mt-8 pr-4 md:pr-0 pointer-events-auto">
                 En cours <br />
-                <span className={`transition-opacity duration-1000 ${showYear ? 'opacity-100' : 'opacity-0'}`}>
+                <span className={`transition-opacity duration-1000 whitespace-nowrap ${showYear ? 'opacity-100' : 'opacity-0'}`}>
                   (2ème année)
                 </span>
               </div>
             </div>
 
-            <div className="flex flex-col items-center w-full relative group">
-              <div className="h-32 flex items-end text-[2rem] lg:text-[2.2rem] text-center items-baseline! leading-none mb-8">Futur</div>
-              <div className="w-full h-17! lg:h-26 drop-shadow-[0_0_15px_rgba(255,255,255,0.3)] hover:drop-shadow-[0_0_25px_rgba(255,255,255,0.6)] transition-all">
-                <svg width="100%" height="100%" viewBox="0 0 200 60" preserveAspectRatio="none" className="overflow-visible">
+            <div className="flex flex-row md:flex-col items-center justify-center md:justify-start w-full relative group -mt-37.5 md:mt-0 pointer-events-none">
+              <div className="order-3 md:order-none w-1/3 md:w-full text-[1.5rem] md:h-32 md:flex md:items-end md:text-[2rem] lg:text-[2.2rem] justify-center md:text-center items-baseline! leading-none mb-0 md:mb-8 pl-4 md:pl-0 pointer-events-auto">Futur</div>
+              <div className="order-2 md:order-none w-20 h-60 md:w-full md:h-17! lg:h-26 rotate-90 md:rotate-0 flex md:block justify-center items-center drop-shadow-[0_0_15px_rgba(255,255,255,0.3)] hover:drop-shadow-[0_0_25px_rgba(255,255,255,0.6)] transition-all pointer-events-auto">
+                <svg width="100%" height="100%" viewBox="0 0 200 60" preserveAspectRatio="none" className="overflow-visible w-[6rem] md:w-full h-[4rem] md:h-full">
                   <path d="M10,0 L190,0 L200,10 L200,50 L190,60 L10,60 L0,50 L0,10 Z" fill="#201547" />
                   <path d="M10,0 L190,0 L200,10 L200,50 L190,60 L10,60 L0,50 L0,10 Z" fill="url(#pixelGridV2)" pointerEvents="none" />
                   <path d="M10,0 L190,0 L200,10 L200,50 L190,60 L10,60 L0,50 L0,10 Z" fill="none" stroke="white" strokeWidth="4" vectorEffect="non-scaling-stroke" />
                 </svg>
               </div>
-              <div className="text-[2.2rem] lg:text-[2.8rem] mt-8">?</div>
+              <div className="order-1 md:order-none w-1/3 md:w-full text-[1.5rem] md:text-[2.2rem] lg:text-[2.8rem] text-right md:text-center mt-0 md:mt-8 pr-4 md:pr-0 pointer-events-auto">?</div>
             </div>
           </div>
         </div>
       </div>
 
-      <div className="mx-50 mt-30">
+      <div className="mx-4 md:mx-50 mt-30">
         <h2 className="font-['KronaOne-Regular'] text-[1.2rem] mb-10 text-left">Langages :</h2>
-        <div className="flex justify-center gap-5">
+        <div className="flex overflow-x-auto justify-start md:justify-center gap-5 pb-4">
           <div className="w-60 flex flex-wrap justify-center gap-20">
             <div className="hover:scale-110 transition-transform cursor-pointer">
-              <SplideJsLogo className="w-16 h-16" />
+              <SplideJsLogo className="w-12 h-12 md:w-16 md:h-16" />
             </div>
             <div className="w-16 hover:scale-110 transition-transform cursor-pointer content-center">
-              <CssLogo className="w-16 h-16" />
+              <CssLogo className="w-12 h-12 md:w-16 md:h-16" />
             </div>
           </div>
           <div className="w-60 flex flex-wrap justify-center gap-20">
             <div className="hover:scale-110 transition-transform cursor-pointer" style={{ transform: 'rotate(10deg)' }}>
-              <HtmlLogo className="w-16 h-16" />
+              <HtmlLogo className="w-12 h-12 md:w-16 md:h-16" />
             </div>
             <div className="hover:scale-110 transition-transform cursor-pointer" style={{ transform: 'rotate(-10deg)' }}>
-              <BootstrapLogo className="w-16 h-16" />
+              <BootstrapLogo className="w-12 h-12 md:w-16 md:h-16" />
             </div>
           </div>
           <div className="w-16 hover:scale-110 transition-transform cursor-pointer content-center">
-            <TailwindLogo className="w-16 h-16" />
+            <TailwindLogo className="w-12 h-12 md:w-16 md:h-16" />
           </div>
           <div className="w-60 flex flex-wrap justify-center gap-20">
             <div className="hover:scale-110 transition-transform cursor-pointer" style={{ transform: 'rotate(-10deg)' }}>
-              <JsLogo className="w-16 h-16" />
+              <JsLogo className="w-12 h-12 md:w-16 md:h-16" />
             </div>
             <div className="hover:scale-110 transition-transform cursor-pointer" style={{ transform: 'rotate(10deg)' }}>
-              <ScssLogo className="w-16 h-16" />
+              <ScssLogo className="w-12 h-12 md:w-16 md:h-16" />
             </div>
           </div>
           <div className="w-16 hover:scale-110 transition-transform cursor-pointer content-center">
-            <ViteLogo className="w-16 h-16" />
+            <ViteLogo className="w-12 h-12 md:w-16 md:h-16" />
           </div>
           <div className="w-60 flex flex-wrap justify-center gap-20">
             <div className="hover:scale-110 transition-transform cursor-pointer" style={{ transform: 'rotate(10deg)' }}>
-              <ReactLogo className="w-16 h-16" />
+              <ReactLogo className="w-12 h-12 md:w-16 md:h-16" />
             </div>
             <div className="hover:scale-110 transition-transform cursor-pointer" style={{ transform: 'rotate(-10deg)' }}>
-              <TypescriptLogo className="w-16 h-16" />
+              <TypescriptLogo className="w-12 h-12 md:w-16 md:h-16" />
             </div>
           </div>
           <div className="w-16 hover:scale-110 transition-transform cursor-pointer content-center">
-            <AngularLogo className="w-16 h-16" />
+            <AngularLogo className="w-12 h-12 md:w-16 md:h-16" />
           </div>
           <div className="w-60 flex flex-wrap justify-center gap-20">
             <div className="hover:scale-110 transition-transform cursor-pointer" style={{ transform: 'rotate(-10deg)' }}>
-              <ChartJsLogo className="w-16 h-16" />
+              <ChartJsLogo className="w-12 h-12 md:w-16 md:h-16" />
             </div>
             <div className="hover:scale-110 transition-transform cursor-pointer" style={{ transform: 'rotate(10deg)' }}>
-              <PythonLogo className="w-16 h-16" />
+              <PythonLogo className="w-12 h-12 md:w-16 md:h-16" />
             </div>
           </div>
           <div className="w-16 hover:scale-110 transition-transform cursor-pointer content-center">
-            <NodejsLogo className="w-16 h-16" />
+            <NodejsLogo className="w-12 h-12 md:w-16 md:h-16" />
           </div>
           <div className="w-60 flex flex-wrap justify-center gap-20">
             <div className="hover:scale-110 transition-transform cursor-pointer" style={{ transform: 'rotate(-10deg)' }}>
-              <PhpLogo className="w-16 h-16" />
+              <PhpLogo className="w-12 h-12 md:w-16 md:h-16" />
             </div>
             <div className="hover:scale-110 transition-transform cursor-pointer" style={{ transform: 'rotate(10deg)' }}>
-              <MysqlLogo className="w-16 h-16" />
+              <MysqlLogo className="w-12 h-12 md:w-16 md:h-16" />
             </div>
           </div>
           <div className="w-60 flex flex-wrap justify-center gap-20">
             <div className="hover:scale-110 transition-transform cursor-pointer">
-              <JavaLogo className="w-16 h-16" />
+              <JavaLogo className="w-12 h-12 md:w-16 md:h-16" />
             </div>
             <div className="w-16 hover:scale-110 transition-transform cursor-pointer content-center">
-              <CSharpLogo className="w-16 h-16" />
+              <CSharpLogo className="w-12 h-12 md:w-16 md:h-16" />
             </div>
           </div>
         </div>
       </div>
 
-      <div className="mx-50 mt-30">
+      <div className="mx-4 md:mx-50 mt-30">
         <h2 className="font-['KronaOne-Regular'] text-[1.2rem] mb-10 text-left">Logiciels :</h2>
-        <div className="flex justify-center gap-5">
+        <div className="flex overflow-x-auto justify-start md:justify-center gap-5 pb-4">
           <div className="w-60 flex flex-wrap justify-center gap-20">
             <div className="hover:scale-110 transition-transform cursor-pointer">
-              <GoogleLogo className="w-16 h-16" />
+              <GoogleLogo className="w-12 h-12 md:w-16 md:h-16" />
             </div>
             <div className="w-16 hover:scale-110 transition-transform cursor-pointer content-center">
-              <TrelloLogo className="w-16 h-16" />
+              <TrelloLogo className="w-12 h-12 md:w-16 md:h-16" />
             </div>
           </div>
           <div className="w-60 flex flex-wrap justify-center gap-20">
             <div className="hover:scale-110 transition-transform cursor-pointer" style={{ transform: 'rotate(10deg)' }}>
-              <PremiereProLogo className="w-16 h-16" />
+              <PremiereProLogo className="w-12 h-12 md:w-16 md:h-16" />
             </div>
             <div className="hover:scale-110 transition-transform cursor-pointer" style={{ transform: 'rotate(-10deg)' }}>
-              <AfterEffectsLogo className="w-16 h-16" />
+              <AfterEffectsLogo className="w-12 h-12 md:w-16 md:h-16" />
             </div>
           </div>
           <div className="w-16 hover:scale-110 transition-transform cursor-pointer content-center">
-            <AcrobatLogo className="w-16 h-16" />
+            <AcrobatLogo className="w-12 h-12 md:w-16 md:h-16" />
           </div>
           <div className="w-60 flex flex-wrap justify-center gap-20">
             <div className="hover:scale-110 transition-transform cursor-pointer" style={{ transform: 'rotate(-10deg)' }}>
-              <IllustratorLogo className="w-16 h-16" />
+              <IllustratorLogo className="w-12 h-12 md:w-16 md:h-16" />
             </div>
             <div className="hover:scale-110 transition-transform cursor-pointer" style={{ transform: 'rotate(10deg)' }}>
-              <PhotoshopLogo className="w-16 h-16" />
+              <PhotoshopLogo className="w-12 h-12 md:w-16 md:h-16" />
             </div>
           </div>
           <div className="w-16 hover:scale-110 transition-transform cursor-pointer content-center">
-            <InDesignLogo className="w-16 h-16" />
+            <InDesignLogo className="w-12 h-12 md:w-16 md:h-16" />
           </div>
           <div className="w-60 flex flex-wrap justify-center gap-20">
             <div className="hover:scale-110 transition-transform cursor-pointer" style={{ transform: 'rotate(10deg)' }}>
-              <FigmaLogo className="w-16 h-16" />
+              <FigmaLogo className="w-12 h-12 md:w-16 md:h-16" />
             </div>
             <div className="hover:scale-110 transition-transform cursor-pointer" style={{ transform: 'rotate(-10deg)' }}>
-              <BlenderLogo className="w-16 h-16" />
+              <BlenderLogo className="w-12 h-12 md:w-16 md:h-16" />
             </div>
           </div>
           <div className="w-16 hover:scale-110 transition-transform cursor-pointer content-center">
-            <CanvaLogo className="w-16 h-16" />
+            <CanvaLogo className="w-12 h-12 md:w-16 md:h-16" />
           </div>
           <div className="w-60 flex flex-wrap justify-center gap-20">
             <div className="hover:scale-110 transition-transform cursor-pointer" style={{ transform: 'rotate(-10deg)' }}>
-              <GitLogo className="w-16 h-16" />
+              <GitLogo className="w-12 h-12 md:w-16 md:h-16" />
             </div>
             <div className="hover:scale-110 transition-transform cursor-pointer" style={{ transform: 'rotate(10deg)' }}>
-              <GitHubLogo className="w-16 h-16" />
+              <GitHubLogo className="w-12 h-12 md:w-16 md:h-16" />
             </div>
           </div>
           <div className="w-16 hover:scale-110 transition-transform cursor-pointer content-center">
-            <GitLabLogo className="w-16 h-16" />
+            <GitLabLogo className="w-12 h-12 md:w-16 md:h-16" />
           </div>
           <div className="w-60 flex flex-wrap justify-center gap-20">
             <div className="w-16 hover:scale-110 transition-transform cursor-pointer content-center" style={{ transform: 'rotate(10deg)' }}>
-              <UnityLogo className="w-16 h-16" />
+              <UnityLogo className="w-12 h-12 md:w-16 md:h-16" />
             </div>
             <div className="hover:scale-110 transition-transform cursor-pointer" style={{ transform: 'rotate(-80deg)' }}>
-              <PostmanLogo className="w-16 h-16" />
+              <PostmanLogo className="w-12 h-12 md:w-16 md:h-16" />
             </div>
           </div>
           <div className="w-60 flex flex-wrap justify-center gap-20">
             <div className="w-16 hover:scale-110 transition-transform cursor-pointer content-center">
-              <WordpressLogo className="w-16 h-16" />
+              <WordpressLogo className="w-12 h-12 md:w-16 md:h-16" />
             </div>
             <div className="hover:scale-110 transition-transform cursor-pointer" style={{ transform: 'rotate(-2deg)' }}>
-              <VisualStudioCodeLogo className="w-16 h-16" />
+              <VisualStudioCodeLogo className="w-12 h-12 md:w-16 md:h-16" />
             </div>
           </div>
         </div>
       </div>
 
-      <div className="my-30 flex flex-col-2 gap-100 justify-center">
+      <div className="my-20 md:my-30 flex flex-wrap gap-10 md:gap-40 justify-center">
         {/* <a href={CVDeveloppeur} download="CV_Developpeur_Joachim_Tocqueville.pdf">
-          <button className="h-10 w-40 rounded-full bg-radial from-[#F7CC1F] to-[#E75F0B] text-[#901616] font-['PlusJakartaSans-Regular'] cursor-pointer">CV développeur</button>
+          <button className="h-10 w-40 rounded-full bg-radial from-[#F7CC1F] to-[#E75F0B] text-[#901616] font-['PlusJakartaSans-Regular'] cursor-pointer border-none">CV développeur</button>
         </a> */}
         <a href={CVDesigner} download="CV_Designer_Joachim_Tocqueville.pdf">
-          <button className="h-10 w-40 rounded-full bg-radial from-[#F7CC1F] to-[#E75F0B] text-[#901616] font-['PlusJakartaSans-Regular'] cursor-pointer">CV designer</button>
+          <button className="h-10 w-35 md:w-40 rounded-full bg-radial from-[#F7CC1F] to-[#E75F0B] text-[#901616] font-['PlusJakartaSans-Regular'] cursor-pointer border-none">CV développeur</button>
         </a>
         <a href={CVDesigner} download="CV_Designer_Joachim_Tocqueville.pdf">
-          <button className="h-10 w-40 rounded-full bg-radial from-[#F7CC1F] to-[#E75F0B] text-[#901616] font-['PlusJakartaSans-Regular'] cursor-pointer">CV designer</button>
+          <button className="h-10 w-35 md:w-40 rounded-full bg-radial from-[#F7CC1F] to-[#E75F0B] text-[#901616] font-['PlusJakartaSans-Regular'] cursor-pointer border-none">CV designer</button>
         </a>
       </div>
     </div >
