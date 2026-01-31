@@ -81,12 +81,35 @@ function Footer() {
             </a>
           </div>
         </div>
-        <form onSubmit={handleSubmit} onChange={handleChange} className="grid gap-5 px-6 md:px-12 lg:px-24 xl:px-50">
+        <form onSubmit={handleSubmit} className="grid gap-5 px-6 md:px-12 lg:px-24 xl:px-50">
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 md:gap-10">
-            <input type="text" name="nom" value={formData.nom} placeholder="Votre nom" className="border-[#EDF2F4] border-3 outline-none p-2 w-full text-[1rem] md:text-[1.1rem]" required />
-            <input type="email" name="email" value={formData.email} placeholder="Votre e-mail" className="border-[#EDF2F4] border-3 outline-none p-2 w-full text-[1rem] md:text-[1.1rem]" required />
+            <input
+              type="text"
+              name="nom"
+              value={formData.nom}
+              onChange={handleChange}
+              placeholder="Votre nom"
+              className="border-[#EDF2F4] border-3 outline-none p-2 w-full text-[1rem] md:text-[1.1rem]"
+              required
+            />
+            <input
+              type="email"
+              name="email"
+              value={formData.email}
+              onChange={handleChange}
+              placeholder="Votre e-mail"
+              className="border-[#EDF2F4] border-3 outline-none p-2 w-full text-[1rem] md:text-[1.1rem]"
+              required
+            />
           </div>
-          <textarea name="message" value={formData.message} placeholder="Votre message" className="border-[#EDF2F4] border-3 outline-none p-2 h-40 align-top text-[1rem] md:text-[1.1rem]" required />
+          <textarea
+            name="message"
+            value={formData.message}
+            onChange={handleChange}
+            placeholder="Votre message"
+            className="border-[#EDF2F4] border-3 outline-none p-2 h-40 align-top text-[1rem] md:text-[1.1rem]"
+            required
+          />
           <div className="flex flex-col items-center gap-4 w-full">
             {status.message && (
               <div className={`font-['PlusJakartaSans-Regular'] text-[1rem] ${status.type === 'success' ? 'text-green-400' : 'text-red-400'}`}>
