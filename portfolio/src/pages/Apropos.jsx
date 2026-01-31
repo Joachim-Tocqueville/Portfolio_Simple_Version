@@ -35,7 +35,7 @@ import ChartJsLogo from '../components/ChartJsLogo';
 import GoogleLogo from '../components/GoogleLogo';
 import SplideJsLogo from '../components/SplideJsLogo';
 import CerveauPixelise from '../assets/imgs/Cerveau_pixelisé.png';
-// import CVDeveloppeur from '../assets/pdf/CV_Developpeur.pdf';
+import CVDeveloppeur from '../assets/pdf/CV_Developpeur.pdf';
 import CVDesigner from '../assets/pdf/CV_Designer.pdf';
 
 import { useState, useEffect } from 'react';
@@ -313,10 +313,7 @@ function Apropos() {
       </div>
 
       <div className="my-20 md:my-30 flex flex-wrap gap-10 md:gap-40 justify-center">
-        {/* <a href={CVDeveloppeur} download="CV_Developpeur_Joachim_Tocqueville.pdf">
-          <button className="h-10 w-40 rounded-full bg-radial from-[#F7CC1F] to-[#E75F0B] text-[#901616] font-['PlusJakartaSans-Regular'] cursor-pointer border-none">CV développeur</button>
-        </a> */}
-        <a href={CVDesigner} download="CV_Designer_Joachim_Tocqueville.pdf">
+        <a href={CVDeveloppeur} download="CV_Developpeur_Joachim_Tocqueville.pdf">
           <button className="h-10 w-35 md:w-40 rounded-full bg-radial from-[#F7CC1F] to-[#E75F0B] text-[#901616] font-['PlusJakartaSans-Regular'] cursor-pointer border-none">CV développeur</button>
         </a>
         <a href={CVDesigner} download="CV_Designer_Joachim_Tocqueville.pdf">
