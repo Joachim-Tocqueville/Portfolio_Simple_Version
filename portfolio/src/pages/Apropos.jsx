@@ -166,27 +166,31 @@ function Apropos() {
 
       <div className="mx-4 md:mx-50 mt-30">
         <h2 className="font-['KronaOne-Regular'] text-[1.2rem] mb-10 text-left">Langages :</h2>
-        <div className="flex overflow-x-auto justify-start md:justify-center gap-5 pb-4">
-          <div className="w-60 flex flex-wrap justify-center gap-20">
-            <div className="hover:scale-110 transition-transform cursor-pointer">
+        <div className="flex flex-row flex-wrap justify-center gap-x-12 gap-y-12 pb-4">
+          {/* 2 */}
+          <div className="flex flex-row gap-8 md:gap-20 justify-center items-center">
+            <div className="hover:scale-110 transition-transform cursor-pointer" style={{ transform: 'rotate(-10deg)' }}>
               <SplideJsLogo className="w-12 h-12 md:w-16 md:h-16" />
             </div>
-            <div className="w-16 hover:scale-110 transition-transform cursor-pointer content-center">
+            <div className="hover:scale-110 transition-transform cursor-pointer" style={{ transform: 'rotate(10deg)' }}>
               <CssLogo className="w-12 h-12 md:w-16 md:h-16" />
             </div>
           </div>
-          <div className="w-60 flex flex-wrap justify-center gap-20">
-            <div className="hover:scale-110 transition-transform cursor-pointer" style={{ transform: 'rotate(10deg)' }}>
+          {/* 2 */}
+          <div className="flex flex-row gap-8 md:gap-20 justify-center items-center">
+            <div className="hover:scale-110 transition-transform cursor-pointer" style={{ transform: 'rotate(-10deg)' }}>
               <HtmlLogo className="w-12 h-12 md:w-16 md:h-16" />
             </div>
-            <div className="hover:scale-110 transition-transform cursor-pointer" style={{ transform: 'rotate(-10deg)' }}>
+            <div className="hover:scale-110 transition-transform cursor-pointer" style={{ transform: 'rotate(10deg)' }}>
               <BootstrapLogo className="w-12 h-12 md:w-16 md:h-16" />
             </div>
           </div>
-          <div className="w-16 hover:scale-110 transition-transform cursor-pointer content-center">
+          {/* 1 */}
+          <div className="hover:scale-110 transition-transform cursor-pointer flex items-center justify-center">
             <TailwindLogo className="w-12 h-12 md:w-16 md:h-16" />
           </div>
-          <div className="w-60 flex flex-wrap justify-center gap-20">
+          {/* 2 */}
+          <div className="flex flex-row gap-8 md:gap-20 justify-center items-center">
             <div className="hover:scale-110 transition-transform cursor-pointer" style={{ transform: 'rotate(-10deg)' }}>
               <JsLogo className="w-12 h-12 md:w-16 md:h-16" />
             </div>
@@ -194,21 +198,25 @@ function Apropos() {
               <ScssLogo className="w-12 h-12 md:w-16 md:h-16" />
             </div>
           </div>
-          <div className="w-16 hover:scale-110 transition-transform cursor-pointer content-center">
+          {/* 1 */}
+          <div className="hover:scale-110 transition-transform cursor-pointer flex items-center justify-center">
             <ViteLogo className="w-12 h-12 md:w-16 md:h-16" />
           </div>
-          <div className="w-60 flex flex-wrap justify-center gap-20">
-            <div className="hover:scale-110 transition-transform cursor-pointer" style={{ transform: 'rotate(10deg)' }}>
+          {/* 2 */}
+          <div className="flex flex-row gap-8 md:gap-20 justify-center items-center">
+            <div className="hover:scale-110 transition-transform cursor-pointer" style={{ transform: 'rotate(-10deg)' }}>
               <ReactLogo className="w-12 h-12 md:w-16 md:h-16" />
             </div>
-            <div className="hover:scale-110 transition-transform cursor-pointer" style={{ transform: 'rotate(-10deg)' }}>
+            <div className="hover:scale-110 transition-transform cursor-pointer" style={{ transform: 'rotate(10deg)' }}>
               <TypescriptLogo className="w-12 h-12 md:w-16 md:h-16" />
             </div>
           </div>
-          <div className="w-16 hover:scale-110 transition-transform cursor-pointer content-center">
+          {/* 1 */}
+          <div className="hover:scale-110 transition-transform cursor-pointer flex items-center justify-center">
             <AngularLogo className="w-12 h-12 md:w-16 md:h-16" />
           </div>
-          <div className="w-60 flex flex-wrap justify-center gap-20">
+          {/* 2 */}
+          <div className="flex flex-row gap-8 md:gap-20 justify-center items-center">
             <div className="hover:scale-110 transition-transform cursor-pointer" style={{ transform: 'rotate(-10deg)' }}>
               <ChartJsLogo className="w-12 h-12 md:w-16 md:h-16" />
             </div>
@@ -216,10 +224,12 @@ function Apropos() {
               <PythonLogo className="w-12 h-12 md:w-16 md:h-16" />
             </div>
           </div>
-          <div className="w-16 hover:scale-110 transition-transform cursor-pointer content-center">
+          {/* 1 */}
+          <div className="hover:scale-110 transition-transform cursor-pointer flex items-center justify-center">
             <NodejsLogo className="w-12 h-12 md:w-16 md:h-16" />
           </div>
-          <div className="w-60 flex flex-wrap justify-center gap-20">
+          {/* 2 */}
+          <div className="flex flex-row gap-8 md:gap-20 justify-center items-center">
             <div className="hover:scale-110 transition-transform cursor-pointer" style={{ transform: 'rotate(-10deg)' }}>
               <PhpLogo className="w-12 h-12 md:w-16 md:h-16" />
             </div>
@@ -227,11 +237,12 @@ function Apropos() {
               <MysqlLogo className="w-12 h-12 md:w-16 md:h-16" />
             </div>
           </div>
-          <div className="w-60 flex flex-wrap justify-center gap-20">
-            <div className="hover:scale-110 transition-transform cursor-pointer">
+          {/* 2 */}
+          <div className="flex flex-row gap-8 md:gap-20 justify-center items-center">
+            <div className="hover:scale-110 transition-transform cursor-pointer" style={{ transform: 'rotate(-10deg)' }}>
               <JavaLogo className="w-12 h-12 md:w-16 md:h-16" />
             </div>
-            <div className="w-16 hover:scale-110 transition-transform cursor-pointer content-center">
+            <div className="hover:scale-110 transition-transform cursor-pointer" style={{ transform: 'rotate(10deg)' }}>
               <CSharpLogo className="w-12 h-12 md:w-16 md:h-16" />
             </div>
           </div>
@@ -240,27 +251,31 @@ function Apropos() {
 
       <div className="mx-4 md:mx-50 mt-30">
         <h2 className="font-['KronaOne-Regular'] text-[1.2rem] mb-10 text-left">Logiciels :</h2>
-        <div className="flex overflow-x-auto justify-start md:justify-center gap-5 pb-4">
-          <div className="w-60 flex flex-wrap justify-center gap-20">
-            <div className="hover:scale-110 transition-transform cursor-pointer">
+        <div className="flex flex-row flex-wrap justify-center gap-x-12 gap-y-12 pb-4">
+          {/* 2 */}
+          <div className="flex flex-row gap-8 md:gap-20 justify-center items-center">
+            <div className="hover:scale-110 transition-transform cursor-pointer" style={{ transform: 'rotate(-10deg)' }}>
               <GoogleLogo className="w-12 h-12 md:w-16 md:h-16" />
             </div>
-            <div className="w-16 hover:scale-110 transition-transform cursor-pointer content-center">
+            <div className="hover:scale-110 transition-transform cursor-pointer" style={{ transform: 'rotate(10deg)' }}>
               <TrelloLogo className="w-12 h-12 md:w-16 md:h-16" />
             </div>
           </div>
-          <div className="w-60 flex flex-wrap justify-center gap-20">
-            <div className="hover:scale-110 transition-transform cursor-pointer" style={{ transform: 'rotate(10deg)' }}>
+          {/* 2 */}
+          <div className="flex flex-row gap-8 md:gap-20 justify-center items-center">
+            <div className="hover:scale-110 transition-transform cursor-pointer" style={{ transform: 'rotate(-10deg)' }}>
               <PremiereProLogo className="w-12 h-12 md:w-16 md:h-16" />
             </div>
-            <div className="hover:scale-110 transition-transform cursor-pointer" style={{ transform: 'rotate(-10deg)' }}>
+            <div className="hover:scale-110 transition-transform cursor-pointer" style={{ transform: 'rotate(10deg)' }}>
               <AfterEffectsLogo className="w-12 h-12 md:w-16 md:h-16" />
             </div>
           </div>
-          <div className="w-16 hover:scale-110 transition-transform cursor-pointer content-center">
+          {/* 1 */}
+          <div className="hover:scale-110 transition-transform cursor-pointer flex items-center justify-center">
             <AcrobatLogo className="w-12 h-12 md:w-16 md:h-16" />
           </div>
-          <div className="w-60 flex flex-wrap justify-center gap-20">
+          {/* 2 */}
+          <div className="flex flex-row gap-8 md:gap-20 justify-center items-center">
             <div className="hover:scale-110 transition-transform cursor-pointer" style={{ transform: 'rotate(-10deg)' }}>
               <IllustratorLogo className="w-12 h-12 md:w-16 md:h-16" />
             </div>
@@ -268,21 +283,25 @@ function Apropos() {
               <PhotoshopLogo className="w-12 h-12 md:w-16 md:h-16" />
             </div>
           </div>
-          <div className="w-16 hover:scale-110 transition-transform cursor-pointer content-center">
+          {/* 1 */}
+          <div className="hover:scale-110 transition-transform cursor-pointer flex items-center justify-center">
             <InDesignLogo className="w-12 h-12 md:w-16 md:h-16" />
           </div>
-          <div className="w-60 flex flex-wrap justify-center gap-20">
-            <div className="hover:scale-110 transition-transform cursor-pointer" style={{ transform: 'rotate(10deg)' }}>
+          {/* 2 */}
+          <div className="flex flex-row gap-8 md:gap-20 justify-center items-center">
+            <div className="hover:scale-110 transition-transform cursor-pointer" style={{ transform: 'rotate(-10deg)' }}>
               <FigmaLogo className="w-12 h-12 md:w-16 md:h-16" />
             </div>
-            <div className="hover:scale-110 transition-transform cursor-pointer" style={{ transform: 'rotate(-10deg)' }}>
+            <div className="hover:scale-110 transition-transform cursor-pointer" style={{ transform: 'rotate(10deg)' }}>
               <BlenderLogo className="w-12 h-12 md:w-16 md:h-16" />
             </div>
           </div>
-          <div className="w-16 hover:scale-110 transition-transform cursor-pointer content-center">
-            <CanvaLogo className="w-12 h-12 md:w-16 md:h-16" />
+          {/* 1 */}
+          <div className="hover:scale-110 transition-transform cursor-pointer flex items-center justify-center">
+            <CanvaLogo className="w-12 h-13 md:w-16 md:h-16" />
           </div>
-          <div className="w-60 flex flex-wrap justify-center gap-20">
+          {/* 2 */}
+          <div className="flex flex-row gap-8 md:gap-20 justify-center items-center">
             <div className="hover:scale-110 transition-transform cursor-pointer" style={{ transform: 'rotate(-10deg)' }}>
               <GitLogo className="w-12 h-12 md:w-16 md:h-16" />
             </div>
@@ -290,22 +309,25 @@ function Apropos() {
               <GitHubLogo className="w-12 h-12 md:w-16 md:h-16" />
             </div>
           </div>
-          <div className="w-16 hover:scale-110 transition-transform cursor-pointer content-center">
+          {/* 1 */}
+          <div className="hover:scale-110 transition-transform cursor-pointer flex items-center justify-center">
             <GitLabLogo className="w-12 h-12 md:w-16 md:h-16" />
           </div>
-          <div className="w-60 flex flex-wrap justify-center gap-20">
-            <div className="w-16 hover:scale-110 transition-transform cursor-pointer content-center" style={{ transform: 'rotate(10deg)' }}>
+          {/* 2 */}
+          <div className="flex flex-row gap-8 md:gap-20 justify-center items-center">
+            <div className="hover:scale-110 transition-transform cursor-pointer" style={{ transform: 'rotate(-10deg)' }}>
               <UnityLogo className="w-12 h-12 md:w-16 md:h-16" />
             </div>
-            <div className="hover:scale-110 transition-transform cursor-pointer" style={{ transform: 'rotate(-80deg)' }}>
+            <div className="hover:scale-110 transition-transform cursor-pointer" style={{ transform: 'rotate(10deg)' }}>
               <PostmanLogo className="w-12 h-12 md:w-16 md:h-16" />
             </div>
           </div>
-          <div className="w-60 flex flex-wrap justify-center gap-20">
-            <div className="w-16 hover:scale-110 transition-transform cursor-pointer content-center">
+          {/* 2 */}
+          <div className="flex flex-row gap-8 md:gap-20 justify-center items-center">
+            <div className="hover:scale-110 transition-transform cursor-pointer" style={{ transform: 'rotate(-10deg)' }}>
               <WordpressLogo className="w-12 h-12 md:w-16 md:h-16" />
             </div>
-            <div className="hover:scale-110 transition-transform cursor-pointer" style={{ transform: 'rotate(-2deg)' }}>
+            <div className="hover:scale-110 transition-transform cursor-pointer" style={{ transform: 'rotate(10deg)' }}>
               <VisualStudioCodeLogo className="w-12 h-12 md:w-16 md:h-16" />
             </div>
           </div>
@@ -313,10 +335,10 @@ function Apropos() {
       </div>
 
       <div className="my-20 md:my-30 flex flex-wrap gap-10 md:gap-40 justify-center">
-        <a href={CVDeveloppeur} download="CV_Developpeur_Joachim_Tocqueville.pdf">
+        <a href={CVDeveloppeur} target="_blank" rel="noopener noreferrer" type="application/pdf">
           <button className="h-10 w-35 md:w-40 rounded-full bg-radial from-[#F7CC1F] to-[#E75F0B] text-[#901616] font-['PlusJakartaSans-Regular'] cursor-pointer border-none">CV développeur</button>
         </a>
-        <a href={CVDesigner} download="CV_Designer_Joachim_Tocqueville.pdf">
+        <a href={CVDesigner} target="_blank" rel="noopener noreferrer" type="application/pdf">
           <button className="h-10 w-35 md:w-40 rounded-full bg-radial from-[#F7CC1F] to-[#E75F0B] text-[#901616] font-['PlusJakartaSans-Regular'] cursor-pointer border-none">CV designer</button>
         </a>
       </div>

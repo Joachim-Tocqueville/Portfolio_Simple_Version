@@ -11,15 +11,41 @@ function Footer() {
     message: ''
   });
 
+  const [status, setStatus] = useState({ type: '', message: '' });
+  const [isSending, setIsSending] = useState(false);
+
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    const subject = `Nouveau message de ${formData.nom} pour collaborer`;
-    const body = `${formData.message}`;
-    window.location.href = `mailto:joachim.tocqueville@gmail.com?subject=${subject}&body=${body}`;
+    setIsSending(true);
+    setStatus({ type: '', message: '' });
+
+    try {
+      const response = await fetch('/.netlify/functions/send-email', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+
+      const data = await response.json();
+
+      if (response.ok) {
+        setStatus({ type: 'success', message: 'Message envoyé avec succès !' });
+        setFormData({ nom: '', email: '', message: '' });
+      } else {
+        setStatus({ type: 'error', message: data.error || "Une erreur est survenue." });
+      }
+    } catch (error) {
+      console.error('Erreur lors de l\'envoi:', error);
+      setStatus({ type: 'error', message: "Impossible de joindre le serveur. Réessayez plus tard." });
+    } finally {
+      setIsSending(false);
+    }
   };
 
   return (
@@ -57,11 +83,20 @@ function Footer() {
         </div>
         <form onSubmit={handleSubmit} onChange={handleChange} className="grid gap-5 px-6 md:px-12 lg:px-24 xl:px-50">
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 md:gap-10">
-            <input type="text" name="nom" placeholder="Votre nom" className="border-[#EDF2F4] border-3 outline-none p-2 w-full text-[1rem] md:text-[1.1rem]" required />
-            <input type="email" name="email" placeholder="Votre e-mail" className="border-[#EDF2F4] border-3 outline-none p-2 w-full text-[1rem] md:text-[1.1rem]" required />
+            <input type="text" name="nom" value={formData.nom} placeholder="Votre nom" className="border-[#EDF2F4] border-3 outline-none p-2 w-full text-[1rem] md:text-[1.1rem]" required />
+            <input type="email" name="email" value={formData.email} placeholder="Votre e-mail" className="border-[#EDF2F4] border-3 outline-none p-2 w-full text-[1rem] md:text-[1.1rem]" required />
           </div>
-          <textarea name="message" placeholder="Votre message" className="border-[#EDF2F4] border-3 outline-none p-2 h-40 align-top text-[1rem] md:text-[1.1rem]" required />
-          <button className="border-[#EDF2F4] border-3 p-2 ml-0 sm:ml-20 md:ml-30 lg:ml-50 rounded-3xl cursor-pointer text-[1rem] md:text-[1.1rem] w-full sm:w-auto self-center sm:self-auto">Envoyer</button>
+          <textarea name="message" value={formData.message} placeholder="Votre message" className="border-[#EDF2F4] border-3 outline-none p-2 h-40 align-top text-[1rem] md:text-[1.1rem]" required />
+          <div className="flex flex-col items-center gap-4 w-full">
+            {status.message && (
+              <div className={`font-['PlusJakartaSans-Regular'] text-[1rem] ${status.type === 'success' ? 'text-green-400' : 'text-red-400'}`}>
+                {status.message}
+              </div>
+            )}
+            <button disabled={isSending} className={`border-[#EDF2F4] border-3 p-2 rounded-3xl cursor-pointer text-[1rem] md:text-[1.1rem] w-full sm:w-60 self-center transition-all ${isSending ? 'opacity-50 cursor-not-allowed bg-[#EDF2F4] text-[#251949]' : 'hover:bg-[#EDF2F4] hover:text-[#251949]'}`}>
+              {isSending ? 'Envoi en cours...' : 'Envoyer'}
+            </button>
+          </div>
         </form>
       </div>
       <div className="font-['PlusJakartaSans-Regular'] text-[0.9rem] md:text-[1.1rem] mb-2">© Joachim Tocqueville</div>

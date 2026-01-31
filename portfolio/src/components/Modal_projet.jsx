@@ -184,12 +184,12 @@ function Modal_projet({ open, handleClose, project }) {
                                         <>
                                             {project.liens?.resultat && (
                                                 <Button className="h-10 w-[11rem] px-8 rounded-full! cursor-pointer! bg-radial from-[#F7CC1F] to-[#E75F0B] text-[#901616]! text-[0.9rem]! normal-case! font-['PlusJakartaSans-Regular']!">
-                                                    <a href={project.liens.resultat} target="_blank" rel="noopener noreferrer">Voir le résultat final</a>
+                                                    <a href={project.liens.resultat} target="_blank" rel="noopener noreferrer" type="application/pdf">Voir le résultat final</a>
                                                 </Button>
                                             )}
                                             {project.liens?.maquettes && (
                                                 <Button className="h-10 w-[11rem] px-8 rounded-full! cursor-pointer! bg-radial from-[#F7CC1F] to-[#E75F0B] text-[#901616]! text-[0.9rem]! normal-case! font-['PlusJakartaSans-Regular']!">
-                                                    <a href={project.liens.maquettes} target="_blank" rel="noopener noreferrer">Voir les maquettes</a>
+                                                    <a href={project.liens.maquettes} target="_blank" rel="noopener noreferrer" type="application/pdf">Voir les maquettes</a>
                                                 </Button>
                                             )}
                                         </>
