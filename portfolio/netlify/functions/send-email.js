@@ -33,15 +33,11 @@ export const handler = async (event, context) => {
                 'Content-Type': 'application/json',
             },
             body: JSON.stringify({
-                from: 'Portfolio <onboarding@resend.dev>',
+                from: '[EMAIL_ADDRESS]',
                 to: 'joachim.tocqueville@gmail.com',
                 reply_to: email,
-                subject: `Nouveau message de ${nom} via Portfolio`,
+                subject: `Nouveau message de ${nom} via mon portfolio`,
                 html: `
-          <h3>Nouveau message de contact</h3>
-          <p><strong>Nom:</strong> ${nom}</p>
-          <p><strong>Email:</strong> ${email}</p>
-          <p><strong>Message:</strong></p>
           <p>${message.replace(/\n/g, '<br>')}</p>
         `,
             }),
