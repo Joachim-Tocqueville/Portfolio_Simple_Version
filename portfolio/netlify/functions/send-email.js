@@ -33,7 +33,7 @@ export const handler = async (event, context) => {
                 'Content-Type': 'application/json',
             },
             body: JSON.stringify({
-                from: '[EMAIL_ADDRESS]',
+                from: 'Portfolio <onboarding@resend.dev>',
                 to: 'joachim.tocqueville@gmail.com',
                 reply_to: email,
                 subject: `Nouveau message de ${nom} via mon portfolio`,
