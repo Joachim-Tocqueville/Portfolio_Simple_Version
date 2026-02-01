@@ -162,7 +162,7 @@ const dataProjets = [
                 Cette SAE (projet universitaire) est un site de commande de boxes de sushis pour une entreprise fictive, Sush'n Go.
                 Notre but était de créer un site web qui permettrait aux clients de commander des boxes de sushis en ligne.
                 La subtilité est que l'utilisateur doit se connecter ou s'inscrire avant de pouvoir ajouter des produits au panier et passer commande.
-                <b><i>Attention : Toute donnée collectée sur ce site ne sera pas conservée.</i></b>
+                <b><i>Attention : Toute donnée collectée sur ce site ne sera ni conservée ni utilisée à des fins différentes de celles du projet.</i></b>
             </>
         ),
         logiciels_langages: (
