@@ -2,7 +2,7 @@ import React from 'react';
 import Card_projet from "../components/Card_projet";
 import Modal_projet from "../components/Modal_projet";
 import DataProjets from "../datas_projets/Dataprojets";
-import { Box, CardContent, Typography } from '@mui/material';
+import { Box, Typography } from '@mui/material';
 import { IoIosArrowForward, IoIosArrowBack } from "react-icons/io";
 import { Splide, SplideTrack, SplideSlide } from '@splidejs/react-splide';
 import { useLocation } from 'react-router-dom';

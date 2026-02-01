@@ -85,7 +85,7 @@ function Apropos() {
             <div className="flex flex-row md:flex-col items-center justify-center md:justify-start w-full relative group pointer-events-none">
               <div className="order-3 md:order-none w-1/3 md:w-full text-[1.5rem] md:h-32 md:flex md:items-end md:text-[2rem] lg:text-[2.2rem] justify-center md:text-center md:items-baseline! leading-none mb-0 md:mb-8 pl-4 md:pl-0 pointer-events-auto">Brevet</div>
               <div className="order-2 md:order-none w-20 h-60 md:w-full md:h-17! lg:h-26 rotate-90 md:rotate-0 flex md:block justify-center items-center drop-shadow-[0_0_15px_rgba(255,255,255,0.3)] hover:drop-shadow-[0_0_25px_rgba(255,255,255,0.6)] transition-all md:mt-0 pointer-events-auto">
-                <a href="https://www.college-la-rochefoucauld77.fr" target="_blank" rel="noopener noreferrer" className="block w-60 h-16 md:w-full md:h-full">
+                <a href="https://www.college-la-rochefoucauld77.fr" target="_blank" rel="noopener noreferrer" className="block w-60 h-16 md:w-full md:h-full group/link">
                   <svg width="100%" height="100%" viewBox="0 0 200 60" preserveAspectRatio="none" className="overflow-visible w-[11rem] md:w-full">
                     <defs>
                       <clipPath id="clipBrevet">
@@ -97,6 +97,28 @@ function Apropos() {
                     <path d="M10,0 L190,0 L200,10 L200,50 L190,60 L10,60 L0,50 L0,10 Z" fill="url(#pixelGridV2)" pointerEvents="none" />
                     <path d="M10,0 L190,0 L200,10 L200,50 L190,60 L10,60 L0,50 L0,10 Z" fill="none" stroke="white" strokeWidth="4" vectorEffect="non-scaling-stroke" />
                   </svg>
+                  <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 md:top-4 md:right-4 md:left-auto md:translate-x-0 md:translate-y-0 -rotate-90 md:rotate-0 pointer-events-none z-20 opacity-100 md:opacity-0 md:group-hover/link:opacity-100 transition-opacity">
+                    <svg viewBox="0 0 10 12" className="w-7 h-7 md:w-8 md:h-8 fill-white drop-shadow-[0_0_5px_rgba(255,255,255,0.5)]" shapeRendering="crispEdges">
+                      <style>{`
+                        @keyframes pixel-click {
+                          0%, 100% { transform: scale(1) translate(0, 0); }
+                          50% { transform: scale(0.85) translate(2px, 2px); }
+                        }
+                        .pixel-hand-cursor {
+                          animation: pixel-click 0.6s infinite ease-in-out;
+                          transform-origin: center;
+                        }
+                      `}</style>
+                      <g className="pixel-hand-cursor text-white fill-current">
+                        <rect x="3" y="0" width="1" height="6" />
+                        <rect x="4" y="2" width="1" height="5" />
+                        <rect x="5" y="2" width="1" height="5" />
+                        <rect x="6" y="3" width="1" height="4" />
+                        <rect x="2" y="5" width="5" height="4" />
+                        <rect x="1" y="5" width="1" height="2" />
+                      </g>
+                    </svg>
+                  </div>
                 </a>
               </div>
               <div className="order-1 md:order-none w-1/3 md:w-full text-[1.5rem] md:text-[2.2rem] lg:text-[2.8rem] text-right md:text-center mt-0 md:mt-8 pr-4 md:pr-0 pointer-events-auto">2019</div>
@@ -105,7 +127,7 @@ function Apropos() {
             <div className="flex flex-row md:flex-col items-center justify-center md:justify-start w-full relative group -mt-25.5 md:mt-0 pointer-events-none">
               <div className="order-3 md:order-none w-1/3 md:w-full text-[1.5rem] md:h-32 md:flex md:items-end md:text-[2rem] lg:text-[2.2rem] justify-center md:text-center items-baseline! leading-none mb-0 md:mb-8 pl-4 md:pl-0 pointer-events-auto">Bac STI2D<br className="hidden md:block" /> option SIN</div>
               <div className="order-2 md:order-none w-20 h-60 md:w-full md:h-17! lg:h-26 rotate-90 md:rotate-0 flex md:block justify-center items-center drop-shadow-[0_0_15px_rgba(255,255,255,0.3)] hover:drop-shadow-[0_0_25px_rgba(255,255,255,0.6)] transition-all pointer-events-auto">
-                <a href="https://www.larmand.fr" target="_blank" rel="noopener noreferrer" className="block w-60 h-16 md:w-full md:h-full">
+                <a href="https://www.larmand.fr" target="_blank" rel="noopener noreferrer" className="block w-60 h-16 md:w-full md:h-full group/link">
                   <svg width="100%" height="100%" viewBox="0 0 200 60" preserveAspectRatio="none" className="overflow-visible w-[6rem] md:w-full">
                     <defs>
                       <clipPath id="clipBac">
@@ -117,6 +139,18 @@ function Apropos() {
                     <path d="M10,0 L190,0 L200,10 L200,50 L190,60 L10,60 L0,50 L0,10 Z" fill="url(#pixelGridV2)" pointerEvents="none" />
                     <path d="M10,0 L190,0 L200,10 L200,50 L190,60 L10,60 L0,50 L0,10 Z" fill="none" stroke="white" strokeWidth="4" vectorEffect="non-scaling-stroke" />
                   </svg>
+                  <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 md:top-4 md:right-4 md:left-auto md:translate-x-0 md:translate-y-0 -rotate-90 md:rotate-0 pointer-events-none z-20 opacity-100 md:opacity-0 md:group-hover/link:opacity-100 transition-opacity">
+                    <svg viewBox="0 0 10 12" className="w-7 h-7 md:w-8 md:h-8 fill-white drop-shadow-[0_0_5px_rgba(255,255,255,0.5)]" shapeRendering="crispEdges">
+                      <g className="pixel-hand-cursor text-white fill-current">
+                        <rect x="3" y="0" width="1" height="6" />
+                        <rect x="4" y="2" width="1" height="5" />
+                        <rect x="5" y="2" width="1" height="5" />
+                        <rect x="6" y="3" width="1" height="4" />
+                        <rect x="2" y="5" width="5" height="4" />
+                        <rect x="1" y="5" width="1" height="2" />
+                      </g>
+                    </svg>
+                  </div>
                 </a>
               </div>
               <div className="order-1 md:order-none w-1/3 md:w-full text-[1.5rem] md:text-[2.2rem] lg:text-[2.8rem] text-right md:text-center mt-0 md:mt-8 pr-4 md:pr-0 pointer-events-auto">2022</div>
@@ -127,7 +161,7 @@ function Apropos() {
                 BUT MMI parcours<br />développement web et<br />dispositifs<br />interactifs
               </div>
               <div className="order-2 md:order-none w-20 h-60 md:w-full md:h-17! lg:h-26 rotate-90 md:rotate-0 flex md:block justify-center items-center drop-shadow-[0_0_15px_rgba(255,255,255,0.3)] hover:drop-shadow-[0_0_25px_rgba(255,255,255,0.6)] transition-all pointer-events-auto">
-                <a href="https://iut.univ-gustave-eiffel.fr" target="_blank" rel="noopener noreferrer" className="block w-60 h-16 md:w-full md:h-full">
+                <a href="https://iut.univ-gustave-eiffel.fr" target="_blank" rel="noopener noreferrer" className="block w-60 h-16 md:w-full md:h-full group/link">
                   <svg width="100%" height="100%" viewBox="0 0 200 60" preserveAspectRatio="none" className="overflow-visible w-[15rem] md:w-full">
                     <defs>
                       <clipPath id="clipMMI">
@@ -139,6 +173,18 @@ function Apropos() {
                     <path d="M10,0 L190,0 L200,10 L200,50 L190,60 L10,60 L0,50 L0,10 Z" fill="url(#pixelGridV2)" pointerEvents="none" />
                     <path d="M10,0 L190,0 L200,10 L200,50 L190,60 L10,60 L0,50 L0,10 Z" fill="none" stroke="white" strokeWidth="4" vectorEffect="non-scaling-stroke" />
                   </svg>
+                  <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 md:top-4 md:right-4 md:left-auto md:translate-x-0 md:translate-y-0 -rotate-90 md:rotate-0 pointer-events-none z-20 opacity-100 md:opacity-0 md:group-hover/link:opacity-100 transition-opacity">
+                    <svg viewBox="0 0 10 12" className="w-7 h-7 md:w-8 md:h-8 fill-white drop-shadow-[0_0_5px_rgba(255,255,255,0.5)]" shapeRendering="crispEdges">
+                      <g className="pixel-hand-cursor text-white fill-current">
+                        <rect x="3" y="0" width="1" height="6" />
+                        <rect x="4" y="2" width="1" height="5" />
+                        <rect x="5" y="2" width="1" height="5" />
+                        <rect x="6" y="3" width="1" height="4" />
+                        <rect x="2" y="5" width="5" height="4" />
+                        <rect x="1" y="5" width="1" height="2" />
+                      </g>
+                    </svg>
+                  </div>
                 </a>
               </div>
               <div className="order-1 md:order-none w-1/3 md:w-full text-[1.5rem] md:text-[2.2rem] lg:text-[2.8rem] text-center md:text-center mt-0 md:mt-8 pr-4 md:pr-0 pointer-events-auto">
@@ -167,7 +213,6 @@ function Apropos() {
       <div className="mx-4 md:mx-50 mt-30">
         <h2 className="font-['KronaOne-Regular'] text-[1.2rem] mb-10 text-left">Langages :</h2>
         <div className="flex flex-row flex-wrap justify-center gap-x-12 gap-y-12 pb-4">
-          {/* 2 */}
           <div className="flex flex-row gap-8 md:gap-20 justify-center items-center">
             <div className="hover:scale-110 transition-transform cursor-pointer" style={{ transform: 'rotate(-10deg)' }}>
               <SplideJsLogo className="w-12 h-12 md:w-16 md:h-16" />
@@ -176,7 +221,6 @@ function Apropos() {
               <CssLogo className="w-12 h-12 md:w-16 md:h-16" />
             </div>
           </div>
-          {/* 2 */}
           <div className="flex flex-row gap-8 md:gap-20 justify-center items-center">
             <div className="hover:scale-110 transition-transform cursor-pointer" style={{ transform: 'rotate(-10deg)' }}>
               <HtmlLogo className="w-12 h-12 md:w-16 md:h-16" />
@@ -185,11 +229,9 @@ function Apropos() {
               <BootstrapLogo className="w-12 h-12 md:w-16 md:h-16" />
             </div>
           </div>
-          {/* 1 */}
           <div className="hover:scale-110 transition-transform cursor-pointer flex items-center justify-center">
             <TailwindLogo className="w-12 h-12 md:w-16 md:h-16" />
           </div>
-          {/* 2 */}
           <div className="flex flex-row gap-8 md:gap-20 justify-center items-center">
             <div className="hover:scale-110 transition-transform cursor-pointer" style={{ transform: 'rotate(-10deg)' }}>
               <JsLogo className="w-12 h-12 md:w-16 md:h-16" />
@@ -198,11 +240,9 @@ function Apropos() {
               <ScssLogo className="w-12 h-12 md:w-16 md:h-16" />
             </div>
           </div>
-          {/* 1 */}
           <div className="hover:scale-110 transition-transform cursor-pointer flex items-center justify-center">
             <ViteLogo className="w-12 h-12 md:w-16 md:h-16" />
           </div>
-          {/* 2 */}
           <div className="flex flex-row gap-8 md:gap-20 justify-center items-center">
             <div className="hover:scale-110 transition-transform cursor-pointer" style={{ transform: 'rotate(-10deg)' }}>
               <ReactLogo className="w-12 h-12 md:w-16 md:h-16" />
@@ -211,11 +251,9 @@ function Apropos() {
               <TypescriptLogo className="w-12 h-12 md:w-16 md:h-16" />
             </div>
           </div>
-          {/* 1 */}
           <div className="hover:scale-110 transition-transform cursor-pointer flex items-center justify-center">
             <AngularLogo className="w-12 h-12 md:w-16 md:h-16" />
           </div>
-          {/* 2 */}
           <div className="flex flex-row gap-8 md:gap-20 justify-center items-center">
             <div className="hover:scale-110 transition-transform cursor-pointer" style={{ transform: 'rotate(-10deg)' }}>
               <ChartJsLogo className="w-12 h-12 md:w-16 md:h-16" />
@@ -224,11 +262,9 @@ function Apropos() {
               <PythonLogo className="w-12 h-12 md:w-16 md:h-16" />
             </div>
           </div>
-          {/* 1 */}
           <div className="hover:scale-110 transition-transform cursor-pointer flex items-center justify-center">
             <NodejsLogo className="w-12 h-12 md:w-16 md:h-16" />
           </div>
-          {/* 2 */}
           <div className="flex flex-row gap-8 md:gap-20 justify-center items-center">
             <div className="hover:scale-110 transition-transform cursor-pointer" style={{ transform: 'rotate(-10deg)' }}>
               <PhpLogo className="w-12 h-12 md:w-16 md:h-16" />
@@ -237,7 +273,6 @@ function Apropos() {
               <MysqlLogo className="w-12 h-12 md:w-16 md:h-16" />
             </div>
           </div>
-          {/* 2 */}
           <div className="flex flex-row gap-8 md:gap-20 justify-center items-center">
             <div className="hover:scale-110 transition-transform cursor-pointer" style={{ transform: 'rotate(-10deg)' }}>
               <JavaLogo className="w-12 h-12 md:w-16 md:h-16" />
@@ -252,7 +287,6 @@ function Apropos() {
       <div className="mx-4 md:mx-50 mt-30">
         <h2 className="font-['KronaOne-Regular'] text-[1.2rem] mb-10 text-left">Logiciels :</h2>
         <div className="flex flex-row flex-wrap justify-center gap-x-12 gap-y-12 pb-4">
-          {/* 2 */}
           <div className="flex flex-row gap-8 md:gap-20 justify-center items-center">
             <div className="hover:scale-110 transition-transform cursor-pointer" style={{ transform: 'rotate(-10deg)' }}>
               <GoogleLogo className="w-12 h-12 md:w-16 md:h-16" />
@@ -261,7 +295,6 @@ function Apropos() {
               <TrelloLogo className="w-12 h-12 md:w-16 md:h-16" />
             </div>
           </div>
-          {/* 2 */}
           <div className="flex flex-row gap-8 md:gap-20 justify-center items-center">
             <div className="hover:scale-110 transition-transform cursor-pointer" style={{ transform: 'rotate(-10deg)' }}>
               <PremiereProLogo className="w-12 h-12 md:w-16 md:h-16" />
@@ -270,11 +303,9 @@ function Apropos() {
               <AfterEffectsLogo className="w-12 h-12 md:w-16 md:h-16" />
             </div>
           </div>
-          {/* 1 */}
           <div className="hover:scale-110 transition-transform cursor-pointer flex items-center justify-center">
             <AcrobatLogo className="w-12 h-12 md:w-16 md:h-16" />
           </div>
-          {/* 2 */}
           <div className="flex flex-row gap-8 md:gap-20 justify-center items-center">
             <div className="hover:scale-110 transition-transform cursor-pointer" style={{ transform: 'rotate(-10deg)' }}>
               <IllustratorLogo className="w-12 h-12 md:w-16 md:h-16" />
@@ -283,11 +314,9 @@ function Apropos() {
               <PhotoshopLogo className="w-12 h-12 md:w-16 md:h-16" />
             </div>
           </div>
-          {/* 1 */}
           <div className="hover:scale-110 transition-transform cursor-pointer flex items-center justify-center">
             <InDesignLogo className="w-12 h-12 md:w-16 md:h-16" />
           </div>
-          {/* 2 */}
           <div className="flex flex-row gap-8 md:gap-20 justify-center items-center">
             <div className="hover:scale-110 transition-transform cursor-pointer" style={{ transform: 'rotate(-10deg)' }}>
               <FigmaLogo className="w-12 h-12 md:w-16 md:h-16" />
@@ -296,11 +325,9 @@ function Apropos() {
               <BlenderLogo className="w-12 h-12 md:w-16 md:h-16" />
             </div>
           </div>
-          {/* 1 */}
           <div className="hover:scale-110 transition-transform cursor-pointer flex items-center justify-center">
             <CanvaLogo className="w-12 h-13 md:w-16 md:h-16" />
           </div>
-          {/* 2 */}
           <div className="flex flex-row gap-8 md:gap-20 justify-center items-center">
             <div className="hover:scale-110 transition-transform cursor-pointer" style={{ transform: 'rotate(-10deg)' }}>
               <GitLogo className="w-12 h-12 md:w-16 md:h-16" />
@@ -309,11 +336,9 @@ function Apropos() {
               <GitHubLogo className="w-12 h-12 md:w-16 md:h-16" />
             </div>
           </div>
-          {/* 1 */}
           <div className="hover:scale-110 transition-transform cursor-pointer flex items-center justify-center">
             <GitLabLogo className="w-12 h-12 md:w-16 md:h-16" />
           </div>
-          {/* 2 */}
           <div className="flex flex-row gap-8 md:gap-20 justify-center items-center">
             <div className="hover:scale-110 transition-transform cursor-pointer" style={{ transform: 'rotate(-10deg)' }}>
               <UnityLogo className="w-12 h-12 md:w-16 md:h-16" />
@@ -322,7 +347,6 @@ function Apropos() {
               <PostmanLogo className="w-12 h-12 md:w-16 md:h-16" />
             </div>
           </div>
-          {/* 2 */}
           <div className="flex flex-row gap-8 md:gap-20 justify-center items-center">
             <div className="hover:scale-110 transition-transform cursor-pointer" style={{ transform: 'rotate(-10deg)' }}>
               <WordpressLogo className="w-12 h-12 md:w-16 md:h-16" />

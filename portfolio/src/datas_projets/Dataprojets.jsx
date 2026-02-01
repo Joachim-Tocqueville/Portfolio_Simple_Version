@@ -1,4 +1,3 @@
-import React from 'react';
 import imgACF2L from '../assets/imgs/ACF2L.webp';
 import imgACF2Lmaquettes from '../assets/imgs/ACF2L_maquettes.webp';
 import imgTechMyBro from '../assets/imgs/Tech_my_bro.webp';
@@ -158,10 +157,14 @@ const dataProjets = [
             "Ce grand projet, très instructif, est un site de commande de boxes de sushis pour une entreprise fictive, Sush'n Go.\
             Durant son développement, j'ai endossé plusieurs rôles (designer et développeur fullstack).\
             J'ai notamment utilisé Figma pour les maquettes, Angular et TypeScript pour le frontend et PHP et MySQL pour le backend, ainsi qu'une API qui a joué le rôle crucial de passerelle entre ces deux parties.",
-        contexte:
-            "Cette SAE (projet universitaire) est un site de commande de boxes de sushis pour une entreprise fictive, Sush'n Go.\
-            Notre but était de créer un site web qui permettrait aux clients de commander des boxes de sushis en ligne.\
-            La subtilité est que l'utilisateur doit se connecter ou s'inscrire avant de pouvoir ajouter des produits au panier et passer commande.",
+        contexte: (
+            <>
+                Cette SAE (projet universitaire) est un site de commande de boxes de sushis pour une entreprise fictive, Sush'n Go.
+                Notre but était de créer un site web qui permettrait aux clients de commander des boxes de sushis en ligne.
+                La subtilité est que l'utilisateur doit se connecter ou s'inscrire avant de pouvoir ajouter des produits au panier et passer commande.
+                <b><i>Attention : Toute donnée collectée sur ce site ne sera pas conservée.</i></b>
+            </>
+        ),
         logiciels_langages: (
             <>
                 Tout d'abord, la phase de conception a débuté par une recherche graphique inspirante et quelques itérations de maquettes sur <b>Figma</b>, en mettant l'accent sur la hiérarchie et la qualité visuelle.
@@ -183,6 +186,7 @@ const dataProjets = [
         categorie: "Fullstack",
         rôle: "Développeur fullstack et designer",
         liens: {
+            site: "https://sae301-303.netlify.app",
             code: "https://github.com/MLoks77/SAE301-303",
             maquettes: "https://www.figma.com/design/lO5ttQLNWRnKHoDOm80Z1a/MAQUETTE-SUSHI?node-id=0-1&t=aVqeKquwqhV4mAaC-1",
         },

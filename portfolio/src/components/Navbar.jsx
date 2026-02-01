@@ -1,5 +1,4 @@
 import { useState } from 'react';
-import { IoMenu, IoClose } from "react-icons/io5";
 
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -17,12 +16,30 @@ function Navbar() {
           <a className="font-['VT323-Regular'] text-[1.5rem]" href="/apropos">À propos</a>
         </div>
 
-        <button className="md:hidden text-[#EDF2F4] cursor-pointer" onClick={() => setIsOpen(!isOpen)}>
-          {isOpen ? <IoClose size={32} /> : <IoMenu size={32} />}
+        <button className="md:hidden text-[#EDF2F4] cursor-pointer z-10" onClick={() => setIsOpen(!isOpen)}>
+          {isOpen ? (
+            <svg viewBox="0 0 5 5" className="w-7! h-6! md:w-8! md:h-8! fill-current" shapeRendering="crispEdges">
+              <rect x="0" y="0" width="1" height="1" />
+              <rect x="4" y="0" width="1" height="1" />
+              <rect x="1" y="1" width="1" height="1" />
+              <rect x="3" y="1" width="1" height="1" />
+              <rect x="2" y="2" width="1" height="1" />
+              <rect x="1" y="3" width="1" height="1" />
+              <rect x="3" y="3" width="1" height="1" />
+              <rect x="0" y="4" width="1" height="1" />
+              <rect x="4" y="4" width="1" height="1" />
+            </svg>
+          ) : (
+            <svg viewBox="0 0 5 5" className="w-7! h-6! md:w-8! md:h-8! fill-current" shapeRendering="crispEdges">
+              <rect x="0" y="0" width="5" height="1" />
+              <rect x="0" y="2" width="5" height="1" />
+              <rect x="0" y="4" width="5" height="1" />
+            </svg>
+          )}
         </button>
       </div>
 
-      <div className={`md:hidden absolute top-full left-0 w-full bg-[#251949] border-t border-[#2D327D] transition-all duration-300 overflow-hidden ${isOpen ? 'max-h-64 py-4 shadow-xl' : 'max-h-0'}`}>
+      <div className={`md:hidden absolute top-full left-0 w-full bg-[#251949] transition-all duration-300 overflow-hidden ${isOpen ? 'max-h-64 py-4 shadow-xl' : 'max-h-0'}`}>
         <div className="flex flex-col items-center gap-6">
           <a className="font-['VT323-Regular'] text-[1.8rem]" href="/accueil" onClick={() => setIsOpen(false)}>Accueil</a>
           <a className="font-['VT323-Regular'] text-[1.8rem]" href="/projets" onClick={() => setIsOpen(false)}>Projets</a>
