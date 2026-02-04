@@ -7,7 +7,7 @@ export { default as JavaLogo } from "./JavaLogo";
 export { default as JsLogo } from "./JsLogo";
 export { default as LinkedInLogo } from "./LinkedInLogo";
 export { default as MysqlLogo } from "./MysqlLogo";
-export { default as NodejsLogo } from "./NodejsLogo";
+export { default as NodejsLogo } from "./NodeJsLogo";
 export { default as PhpLogo } from "./PhpLogo";
 export { default as PythonLogo } from "./PythonLogo";
 export { default as ReactLogo } from "./ReactLogo";

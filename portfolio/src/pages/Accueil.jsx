@@ -36,7 +36,7 @@ function Accueil() {
         pagination: false,
       }} className="h-auto md:h-100 mt-30 mb-20 md:my-30 text-white overflow-x-clip overflow-y-visible">
         <SplideTrack className="overflow-visible!">
-          {featuredProjects.map((project, index) => (
+          {featuredProjects.map((project) => (
             <SplideSlide key={project.id} className="flex flex-col md:grid md:grid-cols-2 gap-8 md:gap-0 m-0! bg-none! bg-transparent! text-[#EDF2F4]! border-none rounded-none! shadow-none! transition-none! duration-0!">
               <Box className="w-full h-auto md:h-100 order-2 md:order-1">
                 <CardContent className="flex flex-col md:grid md:grid-rows-3 gap-6 md:gap-35 px-12! py-4! md:p-4! h-full md:h-100 items-center justify-items-center">
@@ -52,7 +52,7 @@ function Accueil() {
                 </CardContent>
               </Box>
               <Box className="w-full h-auto md:h-100 flex justify-center order-1 md:order-2 px-4 md:px-0">
-                <CardMedia component="img" image={project.image} alt={project.altImage} className={`w-full max-w-[300px] md:max-w-none md:w-100! h-auto md:h-100 aspect-square md:aspect-auto ${project.style?.accueil?.imageFit === 'contain' ? 'object-contain!' : 'object-cover!'} bg-[#EDF2F4] text-black text-[1.1rem]! rounded-2xl content-center cursor-pointer shadow-lg`} style={{ boxShadow: '0 0 35px rgba(237, 242, 244, 0.4)', background: project.style?.accueil?.backgroundColor || '#EDF2F4' }} onClick={() => handleNavigate(project)} />
+                <CardMedia component="img" image={project.image} alt={project.altImage} className={`w-full max-w-75 md:max-w-none md:w-100! h-auto md:h-100 aspect-square md:aspect-auto ${project.style?.accueil?.imageFit === 'contain' ? 'object-contain!' : 'object-cover!'} bg-[#EDF2F4] text-black text-[1.1rem]! rounded-2xl content-center cursor-pointer shadow-lg`} style={{ boxShadow: '0 0 35px rgba(237, 242, 244, 0.4)', background: project.style?.accueil?.backgroundColor || '#EDF2F4' }} onClick={() => handleNavigate(project)} />
               </Box>
             </SplideSlide>
           ))}

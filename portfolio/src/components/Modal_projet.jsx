@@ -27,7 +27,7 @@ function Modal_projet({ open, handleClose, project }) {
         <Modal open={open} onClose={handleClose} aria-labelledby="modal-modal-title" aria-describedby="modal-modal-description" className="flex items-center justify-center backdrop-blur-sm">
             <Box className="relative bg-[#251949] border-5 border-[#2D327D] w-[95%] md:w-[70%] h-[90%] overflow-y-auto p-4 md:p-8 text-[#EDF2F4] outline-none shadow-2xl">
 
-                <IconButton onClick={handleClose} className="absolute top-0 left-[17.5rem] md:top-[0rem] md:left-[59rem] text-[#EDF2F4]! hover:bg-white/10! z-10 rounded-none!">
+                <IconButton onClick={handleClose} className="absolute top-0 left-70 md:top-0 md:left-236 text-[#EDF2F4]! hover:bg-white/10! z-10 rounded-none!">
                     <svg viewBox="0 0 5 5" className="w-4! h-4! md:w-8! md:h-8! fill-current" shapeRendering="crispEdges">
                         <rect x="0" y="0" width="1" height="1" />
                         <rect x="4" y="0" width="1" height="1" />
@@ -47,13 +47,13 @@ function Modal_projet({ open, handleClose, project }) {
 
                 <div className="flex flex-col gap-10 items-center">
 
-                    <div className="relative h-[22rem] md:h-[30rem] w-full flex flex-col rounded-3xl overflow-hidden shadow-2xl" style={{ background: project.style?.modal?.backgroundColor || 'white' }}>
+                    <div className="relative h-88 md:h-120 w-full flex flex-col rounded-3xl overflow-hidden shadow-2xl" style={{ background: project.style?.modal?.backgroundColor || 'white' }}>
 
-                        <div className="bg-white/100 text-black font-['PlusJakartaSans-Regular'] text-lg md:text-xl py-3 px-4 w-full text-center z-20 shadow-md">
+                        <div className="bg-white text-black font-['PlusJakartaSans-Regular'] text-lg md:text-xl py-3 px-4 w-full text-center z-20 shadow-md">
                             {project.rôle}
                         </div>
 
-                        <div className="relative flex-grow w-full h-full min-h-0">
+                        <div className="relative grow w-full h-full min-h-0">
                             <Splide hasTrack={false} options={{
                                 type: projectMedia.length > 1 ? 'loop' : 'slide',
                                 perPage: 1,
@@ -77,10 +77,10 @@ function Modal_projet({ open, handleClose, project }) {
                                 {projectMedia.length > 1 && (
                                     <div className="splide__arrows">
                                         <button className="splide__arrow splide__arrow--prev absolute left-2 top-1/2 -translate-y-1/2 bg-[#201547]/80 p-1.5 rounded-full cursor-pointer hover:bg-[#201547] z-20 border-none flex items-center justify-center">
-                                            <IoIosArrowBack size={24} className="text-[#EDF2F4] md:size-[30px]" />
+                                            <IoIosArrowBack size={24} className="text-[#EDF2F4] md:size-7.5" />
                                         </button>
                                         <button className="splide__arrow splide__arrow--next absolute right-2 top-1/2 -translate-y-1/2 bg-[#201547]/80 p-1.5 rounded-full cursor-pointer hover:bg-[#201547] z-20 border-none flex items-center justify-center">
-                                            <IoIosArrowForward size={24} className="text-[#EDF2F4] md:size-[30px]" />
+                                            <IoIosArrowForward size={24} className="text-[#EDF2F4] md:size-7.5" />
                                         </button>
                                     </div>
                                 )}
@@ -88,7 +88,7 @@ function Modal_projet({ open, handleClose, project }) {
                         </div>
                     </div>
 
-                    <div className="flex flex-col gap-7 px-4 md:px-[5rem] lg:px-[15rem] text-center font-['PlusJakartaSans-Regular']">
+                    <div className="flex flex-col gap-7 px-4 md:px-20 lg:px-60 text-center font-['PlusJakartaSans-Regular']">
                         <div>
                             <p className="mb-2">Contexte :</p>
                             <p className="text-gray-300">{project.contexte}</p>
@@ -114,7 +114,7 @@ function Modal_projet({ open, handleClose, project }) {
                         <div className="flex flex-col gap-4 md:grid md:grid-cols-3 w-full mt-4 items-center px-4 md:px-20">
                             <div className="flex justify-center md:justify-end pr-0 md:pr-10 w-full md:w-auto">
                                 {(project.categorie === 'Front' || project.categorie === 'Fullstack') && project.liens.site && (
-                                    <Button className="h-10 w-[7rem] px-8 rounded-full! cursor-pointer! bg-radial from-[#F7CC1F] to-[#E75F0B] text-[#901616]! text-[0.9rem]! normal-case! font-['PlusJakartaSans-Regular']!">
+                                    <Button className="h-10 w-28 px-8 rounded-full! cursor-pointer! bg-radial from-[#F7CC1F] to-[#E75F0B] text-[#901616]! text-[0.9rem]! normal-case! font-['PlusJakartaSans-Regular']!">
                                         <a href={project.liens.site} target="_blank" rel="noopener noreferrer">Voir le site</a>
                                     </Button>
                                 )}
@@ -122,7 +122,7 @@ function Modal_projet({ open, handleClose, project }) {
 
                             <div className="flex justify-center w-full md:w-auto">
                                 {(project.categorie === 'Front' || project.categorie === 'Fullstack') && project.liens.code && (
-                                    <Button className="h-10 w-[8rem] px-8 rounded-full! cursor-pointer! bg-radial from-[#F7CC1F] to-[#E75F0B] text-[#901616]! text-[0.9rem]! normal-case! font-['PlusJakartaSans-Regular']!">
+                                    <Button className="h-10 w-32 px-8 rounded-full! cursor-pointer! bg-radial from-[#F7CC1F] to-[#E75F0B] text-[#901616]! text-[0.9rem]! normal-case! font-['PlusJakartaSans-Regular']!">
                                         <a href={project.liens.code} target="_blank" rel="noopener noreferrer">Voir le code</a>
                                     </Button>
                                 )}
@@ -130,7 +130,7 @@ function Modal_projet({ open, handleClose, project }) {
 
                             <div className="flex justify-center md:justify-start pl-0 md:pl-10 w-full md:w-auto">
                                 {(project.categorie === 'Front' || project.categorie === 'Fullstack') && project.liens.maquettes && (
-                                    <Button className="h-10 w-[11rem] px-8 rounded-full! cursor-pointer! bg-radial from-[#F7CC1F] to-[#E75F0B] text-[#901616]! text-[0.9rem]! normal-case! font-['PlusJakartaSans-Regular']!">
+                                    <Button className="h-10 w-44 px-8 rounded-full! cursor-pointer! bg-radial from-[#F7CC1F] to-[#E75F0B] text-[#901616]! text-[0.9rem]! normal-case! font-['PlusJakartaSans-Regular']!">
                                         <a href={project.liens.maquettes} target="_blank" rel="noopener noreferrer">Voir les maquettes</a>
                                     </Button>
                                 )}
@@ -141,17 +141,17 @@ function Modal_projet({ open, handleClose, project }) {
                             {(project.categorie === 'Front' || project.categorie === 'Fullstack') && (
                                 <>
                                     {project.liens.site && (
-                                        <Button className="h-10 w-[7rem] px-8 rounded-full! cursor-pointer! bg-radial from-[#F7CC1F] to-[#E75F0B] text-[#901616]! text-[0.9rem]! normal-case! font-['PlusJakartaSans-Regular']!">
+                                        <Button className="h-10 w-28 px-8 rounded-full! cursor-pointer! bg-radial from-[#F7CC1F] to-[#E75F0B] text-[#901616]! text-[0.9rem]! normal-case! font-['PlusJakartaSans-Regular']!">
                                             <a href={project.liens.site} target="_blank" rel="noopener noreferrer">Voir le site</a>
                                         </Button>
                                     )}
                                     {project.liens.code && (
-                                        <Button className="h-10 w-[8rem] px-8 rounded-full! cursor-pointer! bg-radial from-[#F7CC1F] to-[#E75F0B] text-[#901616]! text-[0.9rem]! normal-case! font-['PlusJakartaSans-Regular']!">
+                                        <Button className="h-10 w-32 px-8 rounded-full! cursor-pointer! bg-radial from-[#F7CC1F] to-[#E75F0B] text-[#901616]! text-[0.9rem]! normal-case! font-['PlusJakartaSans-Regular']!">
                                             <a href={project.liens.code} target="_blank" rel="noopener noreferrer">Voir le code</a>
                                         </Button>
                                     )}
                                     {project.liens.maquettes && (
-                                        <Button className="h-10 w-[11rem] px-8 rounded-full! cursor-pointer! bg-radial from-[#F7CC1F] to-[#E75F0B] text-[#901616]! text-[0.9rem]! normal-case! font-['PlusJakartaSans-Regular']!">
+                                        <Button className="h-10 w-44 px-8 rounded-full! cursor-pointer! bg-radial from-[#F7CC1F] to-[#E75F0B] text-[#901616]! text-[0.9rem]! normal-case! font-['PlusJakartaSans-Regular']!">
                                             <a href={project.liens.maquettes} target="_blank" rel="noopener noreferrer">Voir les maquettes</a>
                                         </Button>
                                     )}
@@ -163,25 +163,38 @@ function Modal_projet({ open, handleClose, project }) {
                                     {project.titre === 'Magazine' ? (
                                         <>
                                             {project.liens.resultat.magazine && (
-                                                <Button className="h-10 w-[10rem] px-8 rounded-full! cursor-pointer! bg-radial from-[#F7CC1F] to-[#E75F0B] text-[#901616]! text-[0.9rem]! normal-case! font-['PlusJakartaSans-Regular']!">
+                                                <Button className="h-10 w-40 px-8 rounded-full! cursor-pointer! bg-radial from-[#F7CC1F] to-[#E75F0B] text-[#901616]! text-[0.9rem]! normal-case! font-['PlusJakartaSans-Regular']!">
                                                     <a href={project.liens.resultat.magazine} target="_blank" rel="noopener noreferrer">Voir le magazine</a>
                                                 </Button>
                                             )}
                                             {project.liens.resultat.plancheTendance && (
-                                                <Button className="h-10 w-[15rem] px-8 rounded-full! cursor-pointer! bg-radial from-[#F7CC1F] to-[#E75F0B] text-[#901616]! text-[0.9rem]! normal-case! font-['PlusJakartaSans-Regular']!">
+                                                <Button className="h-10 w-60 px-8 rounded-full! cursor-pointer! bg-radial from-[#F7CC1F] to-[#E75F0B] text-[#901616]! text-[0.9rem]! normal-case! font-['PlusJakartaSans-Regular']!">
                                                     <a href={project.liens.resultat.plancheTendance} target="_blank" rel="noopener noreferrer">Voir la planche de tendance</a>
+                                                </Button>
+                                            )}
+                                        </>
+                                    ) : project.titre === 'SAE203' ? (
+                                        <>
+                                            {project.liens?.PU && (
+                                                <Button className="h-10 w-56 px-8 rounded-full! cursor-pointer! bg-radial from-[#F7CC1F] to-[#E75F0B] text-[#901616]! text-[0.9rem]! normal-case! font-['PlusJakartaSans-Regular']!">
+                                                    <a href={project.liens.PU} target="_blank" rel="noopener noreferrer" type="application/pdf">Voir le parcours utilisateur</a>
+                                                </Button>
+                                            )}
+                                            {project.liens?.PUJM && (
+                                                <Button className="h-10 w-[20rem] px-8 rounded-full! cursor-pointer! bg-radial from-[#F7CC1F] to-[#E75F0B] text-[#901616]! text-[0.9rem]! normal-case! font-['PlusJakartaSans-Regular']!">
+                                                    <a href={project.liens.PUJM} target="_blank" rel="noopener noreferrer" type="application/pdf">Voir les personas et users journey maps</a>
                                                 </Button>
                                             )}
                                         </>
                                     ) : (
                                         <>
                                             {project.liens?.resultat && (
-                                                <Button className="h-10 w-[11rem] px-8 rounded-full! cursor-pointer! bg-radial from-[#F7CC1F] to-[#E75F0B] text-[#901616]! text-[0.9rem]! normal-case! font-['PlusJakartaSans-Regular']!">
+                                                <Button className="h-10 w-44 px-8 rounded-full! cursor-pointer! bg-radial from-[#F7CC1F] to-[#E75F0B] text-[#901616]! text-[0.9rem]! normal-case! font-['PlusJakartaSans-Regular']!">
                                                     <a href={project.liens.resultat} target="_blank" rel="noopener noreferrer" type="application/pdf">Voir le résultat final</a>
                                                 </Button>
                                             )}
                                             {project.liens?.maquettes && (
-                                                <Button className="h-10 w-[11rem] px-8 rounded-full! cursor-pointer! bg-radial from-[#F7CC1F] to-[#E75F0B] text-[#901616]! text-[0.9rem]! normal-case! font-['PlusJakartaSans-Regular']!">
+                                                <Button className="h-10 w-44 px-8 rounded-full! cursor-pointer! bg-radial from-[#F7CC1F] to-[#E75F0B] text-[#901616]! text-[0.9rem]! normal-case! font-['PlusJakartaSans-Regular']!">
                                                     <a href={project.liens.maquettes} target="_blank" rel="noopener noreferrer" type="application/pdf">Voir les maquettes</a>
                                                 </Button>
                                             )}

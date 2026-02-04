@@ -11,6 +11,9 @@ import imgSushngoMaquettes from '../assets/imgs/Sush\'n_go_maquettes.webp';
 import imgComète from '../assets/imgs/Théa_Comète.webp';
 import imgSleepiest from '../assets/imgs/Sleepiest_maquettes.webp';
 import imgTuga from '../assets/imgs/Tuga_maquettes.webp';
+import imgSAE203 from '../assets/imgs/SAE203_personas_et_users_journey_maps.webp';
+import imgSAE203UX from '../assets/imgs/SAE203_UX.webp';
+// import imgSpadragSiteUX from '../assets/imgs/Spadrag_site_UX.webp';
 import pdfMagazine from '../assets/pdf/Magazine.pdf';
 import pdfPlancheTendance from '../assets/pdf/Planche_de_tendance.pdf';
 import vidéoComète from '../assets/vidéos/Théa_Comète.webm';
@@ -300,76 +303,6 @@ const dataProjets = [
     },
     {
         id: 7,
-        image: imgSleepiest,
-        altImage: "Sleepiest",
-        titre: "Sleepiest",
-        contexte:
-            "Cet exercice avait pour but de reproduire fidèlement un design existant.\
-            Le choix du design était libre, alors j'ai cherché des designs inspirants sur Dribbble et j'ai opté pour un design épuré et \"nocturne\", celui de Sleepiest.",
-        logiciels_langages: (
-            <>
-                Une fois le design choisi, j'ai utilisé <b>Figma</b> pour répliquer le mieux possible ce dernier.
-                J'ai notamment utilisé des composants (boutons, dont un avec des variantes) et créer des styles réutilisables (taille de polices et couleurs).
-            </>
-        ),
-        dates:
-            "J'ai réalisé ce projet mi-mai 2025.",
-        difficultes:
-            "La seule difficulté que j'ai rencontrée était la gestion des tailles des éléments.",
-        categorie: "Design",
-        rôle: "Designer",
-        liens: {
-            maquettes: "https://www.figma.com/design/fjKiFVukXqMa016HpA7ONl/Sleepiest-frames?node-id=0-1&t=pp1iTNcgJ2s7l20g-1",
-        },
-        style: {
-            projets: {
-                imageFit: "contain",
-                backgroundColor: "#1E1E1E"
-            },
-            modal: {
-                imageFit: "contain",
-                backgroundColor: "#1E1E1E"
-            }
-        }
-    },
-    {
-        id: 8,
-        image: imgTuga,
-        altImage: "Tuga",
-        titre: "Tuga",
-        contexte:
-            "Ce projet consistait en la création d'une marque de streetwear premium.\
-            Mon équipe et moi avions décidé de nous inspirer du portugal.\
-            Bien sûr, il y a toute une partie marketing mais ici, je vais me concentrer sur la partie design.",
-        logiciels_langages: (
-            <>
-                Après la création de notre charte graphique, j'ai réalisé la page produits, sur <b>Figma</b>.
-                J'ai également rédigé, sur <b>Canva</b>, un calendrier éditorial et cinq rubriques de contenus, dont deux générées par IA.
-            </>
-        ),
-        dates:
-            "Nous avons réalisé ce projet en 3 mois (de mi-septembre à mi-décembre 2025), en parallèle d'autres obligations académiques.",
-        difficultes:
-            "Les deux principaux défis que j'ai rencontrés concernaient le design de ma page ainsi que la rédaction des rubriques de contenus.\
-            J'ai résolu le premier en m'inspirant sur des sites tels que Dribbble et le second en m'inspirant de celles que j'avais déjà pu réaliser pour un autre projet en marketing.",
-        categorie: "Design",
-        rôle: "Designer",
-        liens: {
-            maquettes: "https://www.figma.com/design/9h0wYToThAkLacXjzbkA4N/Tuga?node-id=0-1&t=ofZOtJZJaeNOQW4z-1",
-        },
-        style: {
-            projets: {
-                imageFit: "contain",
-                backgroundColor: "#1E1E1E"
-            },
-            modal: {
-                imageFit: "scale-down",
-                backgroundColor: "#1E1E1E"
-            }
-        }
-    },
-    {
-        id: 9,
         image: imgComète,
         vidéo: vidéoComète,
         altImage: "Animation de \"Comète\"",
@@ -405,6 +338,113 @@ const dataProjets = [
             modal: {
                 imageFit: "contain",
                 backgroundColor: "transparent"
+            }
+        }
+    },
+    {
+        id: 8,
+        image: imgSleepiest,
+        altImage: "Sleepiest",
+        titre: "Sleepiest",
+        contexte:
+            "Cet exercice avait pour but de reproduire fidèlement un design existant.\
+            Le choix du design était libre, alors j'ai cherché des designs inspirants sur Dribbble et j'ai opté pour un design épuré et \"nocturne\", celui de Sleepiest.",
+        logiciels_langages: (
+            <>
+                Une fois le design choisi, j'ai utilisé <b>Figma</b> pour répliquer le mieux possible ce dernier.
+                J'ai notamment utilisé des composants (boutons, dont un avec des variantes) et créer des styles réutilisables (taille de polices et couleurs).
+            </>
+        ),
+        dates:
+            "J'ai réalisé ce projet mi-mai 2025.",
+        difficultes:
+            "La seule difficulté que j'ai rencontrée était la gestion des tailles des éléments.",
+        categorie: "Design",
+        rôle: "Designer",
+        liens: {
+            maquettes: "https://www.figma.com/design/fjKiFVukXqMa016HpA7ONl/Sleepiest-frames?node-id=0-1&t=pp1iTNcgJ2s7l20g-1",
+        },
+        style: {
+            projets: {
+                imageFit: "contain",
+                backgroundColor: "#1E1E1E"
+            },
+            modal: {
+                imageFit: "contain",
+                backgroundColor: "#1E1E1E"
+            }
+        }
+    },
+    {
+        id: 9,
+        image: imgTuga,
+        altImage: "Tuga",
+        titre: "Tuga",
+        contexte:
+            "Ce projet consistait en la création d'une marque de streetwear premium.\
+            Mon équipe et moi avions décidé de nous inspirer du portugal.\
+            Bien sûr, il y a toute une partie marketing mais ici, je vais me concentrer sur la partie design.",
+        logiciels_langages: (
+            <>
+                Après la création de notre charte graphique, j'ai réalisé la page produits, sur <b>Figma</b>.
+                J'ai également rédigé, sur <b>Canva</b>, un calendrier éditorial et cinq rubriques de contenus, dont deux générées par IA.
+            </>
+        ),
+        dates:
+            "Nous avons réalisé ce projet en 3 mois (de mi-septembre à mi-décembre 2025), en parallèle d'autres obligations académiques.",
+        difficultes:
+            "Les deux principaux défis que j'ai rencontrés concernaient le design de ma page ainsi que la rédaction des rubriques de contenus.\
+            J'ai résolu le premier en m'inspirant sur des sites tels que Dribbble et le second en m'inspirant de celles que j'avais déjà pu réaliser pour un autre projet en marketing.",
+        categorie: "Design",
+        rôle: "Designer",
+        liens: {
+            maquettes: "https://www.figma.com/design/9h0wYToThAkLacXjzbkA4N/Tuga?node-id=0-1&t=ofZOtJZJaeNOQW4z-1",
+        },
+        style: {
+            projets: {
+                imageFit: "contain",
+                backgroundColor: "#1E1E1E"
+            },
+            modal: {
+                imageFit: "scale-down",
+                backgroundColor: "#1E1E1E"
+            }
+        }
+    },
+    {
+        id: 10,
+        images: [imgSAE203UX, imgSAE203],
+        image: imgSAE203UX,
+        altImage: "SAE203",
+        titre: "SAE203",
+        contexte:
+            "Ce grand projet (SAE) est un site de réservation de matériels et de salles pour l'université Gustave Eiffel.\
+            Durant son développement, j'ai endossé plusieurs rôles (designer et développeur fullstack) mais nous allons nous concentrer sur la partie UX.",
+        logiciels_langages: (
+            <>
+                J'ai participé à la création du parcours utilisateur, et ai créé des personas et des users journey maps pour ce projet sur <b>Figma</b>.
+            </>
+        ),
+        dates:
+            "Nous avions réalisé ce projet en 2 mois (d'avril à mai 2025), en parallèle d'autres obligations académiques.",
+        difficultes:
+            "Malheureusement, avec mon groupe, nous n'avons pas réussi à terminer le projet.\
+            Cela est dû à des problèmes de connexion avec la base de données.\
+            C'est pourquoi je ne mettrai pas de lien vers le projet finalisé.",
+        categorie: "Design",
+        rôle: "Développeur fullstack et designer",
+        liens: {
+            PU: "https://www.figma.com/board/OBWY9Thy7tEKSRjSXJXhWO/SAE-203?node-id=0-1&p=f&t=wq00Z1JQ6J6KTsVG-0",
+            PUJM: "https://www.figma.com/board/RPLf5aKeh04pwBX5ZJDs24/Personas-et-users-journey-map?node-id=0-1&p=f&t=LbrzHbEBCwAaWLBI-0"
+        },
+        style: {
+            projets: {
+                imageFit: "contain",
+                backgroundColor: "#F5F5F5"
+            },
+            modal: {
+                imageFit: "contain",
+                backgroundColor: "#F5F5F5"
             }
         }
     },
