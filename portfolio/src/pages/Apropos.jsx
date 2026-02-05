@@ -1,6 +1,6 @@
 import HtmlLogo from '../components/HtmlLogo';
 import CssLogo from '../components/CssLogo';
-import JsLogo from '../components/JsLogo';
+import JSLogo from '../components/JSLogo';
 import ReactLogo from '../components/ReactLogo';
 import PhpLogo from '../components/PhpLogo';
 import NodeJSLogo from '../components/NodeJSLogo';
@@ -31,15 +31,14 @@ import AcrobatLogo from '../components/AcrobatLogo';
 import UnityLogo from '../components/UnityLogo';
 import GitLabLogo from '../components/GitLabLogo';
 import CanvaLogo from '../components/CanvaLogo';
-import ChartJsLogo from '../components/ChartJsLogo';
+import ChartJSLogo from '../components/ChartJSLogo';
 import GoogleLogo from '../components/GoogleLogo';
-import SplideJsLogo from '../components/SplideJsLogo';
+import SplideJSLogo from '../components/SplideJSLogo';
 import SymfonyLogo from '../components/SymfonyLogo';
-import ExpressJsLogo from '../components/ExpressJsLogo';
+import ExpressJSLogo from '../components/ExpressJSLogo';
 import CerveauPixelise from '../assets/imgs/Cerveau_pixelisé.png';
 import CVDeveloppeur from '../assets/pdf/CV_Developpeur.pdf';
 import CVDesigner from '../assets/pdf/CV_Designer.pdf';
-
 import { useState, useEffect } from 'react';
 
 function Apropos() {
@@ -217,7 +216,7 @@ function Apropos() {
         <div className="flex flex-wrap md:flex-nowrap justify-center gap-x-12 gap-y-12 pb-4">
           <div className="flex flex-col gap-8 md:gap-20 justify-center items-center">
             <div className="hover:scale-110 transition-transform cursor-pointer" style={{ transform: 'rotate(-10deg)' }}>
-              <SplideJsLogo className="w-12 h-12 md:w-16 md:h-16" />
+              <SplideJSLogo className="w-12 h-12 md:w-16 md:h-16" />
             </div>
             <div className="hover:scale-110 transition-transform cursor-pointer" style={{ transform: 'rotate(10deg)' }}>
               <CssLogo className="w-12 h-12 md:w-16 md:h-16" />
@@ -236,7 +235,7 @@ function Apropos() {
           </div>
           <div className="flex flex-col gap-8 md:gap-20 justify-center items-center">
             <div className="hover:scale-110 transition-transform cursor-pointer" style={{ transform: 'rotate(-10deg)' }}>
-              <JsLogo className="w-12 h-12 md:w-16 md:h-16" />
+              <JSLogo className="w-12 h-12 md:w-16 md:h-16" />
             </div>
             <div className="hover:scale-110 transition-transform cursor-pointer" style={{ transform: 'rotate(10deg)' }}>
               <ScssLogo className="w-12 h-12 md:w-16 md:h-16" />
@@ -258,7 +257,7 @@ function Apropos() {
               <AngularLogo className="w-12 h-12 md:w-16 md:h-16" />
             </div>
             <div className="hover:scale-110 transition-transform cursor-pointer" style={{ transform: 'rotate(10deg)' }}>
-              <ChartJsLogo className="w-12 h-12 md:w-16 md:h-16" />
+              <ChartJSLogo className="w-12 h-12 md:w-16 md:h-16" />
             </div>
           </div>
           <div className="flex flex-col gap-8 md:gap-20 justify-center items-center">
@@ -274,7 +273,7 @@ function Apropos() {
               <NodeJSLogo className="w-12 h-12 md:w-16 md:h-16" />
             </div>
             <div className="hover:scale-110 transition-transform cursor-pointer" style={{ transform: 'rotate(-10deg)' }}>
-              <ExpressJsLogo className="w-12 h-12 md:w-16 md:h-16 fill-white" />
+              <ExpressJSLogo className="w-12 h-12 md:w-16 md:h-16 fill-white" />
             </div>
           </div>
           <div className="flex flex-col gap-8 md:gap-20 justify-center items-center">
