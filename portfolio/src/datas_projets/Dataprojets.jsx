@@ -415,8 +415,8 @@ const dataProjets = [
         id: 10,
         images: [imgSAE203UX, imgSAE203],
         image: imgSAE203UX,
-        altImage: "SAE203",
-        titre: "SAE203",
+        altImage: "Site de réservation",
+        titre: "Site de réservation",
         contexte:
             "Ce grand projet (SAE) est un site de réservation de matériels et de salles pour l'université Gustave Eiffel.\
             Durant son développement, j'ai endossé plusieurs rôles (designer et développeur fullstack) mais nous allons nous concentrer sur la partie UX.",
@@ -447,7 +447,7 @@ const dataProjets = [
                 backgroundColor: "#F5F5F5"
             }
         }
-    },
+    }
 ];
 
 export default dataProjets;

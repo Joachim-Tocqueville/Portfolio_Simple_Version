@@ -6,7 +6,8 @@
     "react-router-dom": "^7.12.0"
   },
   "devDependencies": {
+    "@react-native-community/cli": "latest",
     "tailwindcss": "^4.1.18",
-    "@react-native-community/cli": "latest"
+    "vite-plugin-svgr": "^4.5.0"
   }
 }

@@ -18,21 +18,32 @@ const splideStyles = `
     justify-content: center !important;
     height: 100%;
   }
-  .splide-centered .splide__list {
-    justify-content: center !important;
-    padding-top: 1rem !important;
-  }
-  .splide-space-between .splide__list {
-    justify-content: space-between !important;
+  /* On applique le centrage horizontal uniquement sur desktop (min-width: 768px) */
+  @media (min-width: 768px) {
+    .splide-centered .splide__list {
+      justify-content: center !important;
+      display: flex !important;
+      transform: none !important; /* Force l'annulation du décalage Splide */
+      gap: 1.4rem !important;       /* Recrée l'espace manuellement pour la liste fixe */
+      padding-top: 1rem !important;
+    }
+    .front-slide {
+      width: calc(20% - 2.4rem) !important;
+    }
   }
   .splide__track {
     overflow: hidden !important;
   }
-  .splide__arrow--disabled,
-  .splide__arrow.splide__arrow--disabled {
+  .splide__arrow--disabled {
     opacity: 0 !important;
     pointer-events: none !important;
     visibility: hidden !important;
+  }
+  .arrow-hidden {
+    opacity: 0 !important;
+    pointer-events: none !important;
+    visibility: hidden !important;
+    transition: opacity 0.3s ease !important;
   }
 `;
 
@@ -40,6 +51,10 @@ function Projets() {
   const [open, setOpen] = React.useState(false);
   const [selectedProject, setSelectedProject] = React.useState(null);
   const location = useLocation();
+
+  const [frontArrows, setFrontArrows] = React.useState({ prev: false, next: true });
+  const [fullstackArrows, setFullstackArrows] = React.useState({ prev: false, next: true });
+  const [designArrows, setDesignArrows] = React.useState({ prev: false, next: true });
 
   React.useEffect(() => {
     if (location.state?.projectToOpenId) {
@@ -63,6 +78,16 @@ function Projets() {
   const fullstackProjets = DataProjets.filter((projet) => projet.categorie === "Fullstack");
   const designProjets = DataProjets.filter((projet) => projet.categorie === "Design");
 
+  const handleSplideMove = (splide, setArrows, totalItems) => {
+    const index = splide.index;
+    const perPage = splide.options.perPage;
+    
+    setArrows({
+      prev: index > 0,
+      next: index < totalItems - perPage
+    });
+  };
+
   return (
     <>
       <style>{splideStyles}</style>
@@ -78,35 +103,37 @@ function Projets() {
         </Typography>
       </Box>
       <div className="w-full overflow-x-clip">
-      <Splide hasTrack={false} options={{
-        type: 'slide',
-        gap: '3rem',
-        perPage: 5,
-        perMove: 1,
-        arrows: frontProjets.length > 5,
-        drag: frontProjets.length > 1,
-        pagination: false,
-        trimSpace: true,
-        rewind: false,
-        updateOnMove: true,
-        breakpoints: {
-          1280: { perPage: 4, focus: 'center', arrows: frontProjets.length > 4 },
-          1024: { perPage: 3, focus: 'center', arrows: frontProjets.length > 3 },
-          768: { perPage: 1, focus: 'center', arrows: frontProjets.length > 1 },
-        }
-      }} className={`${frontProjets.length > 5 ? 'splide-space-between' : 'splide-centered ml-8'} h-auto md:h-100 mb-16 md:mb-25 text-white overflow-x-clip md:overflow-visible py-8 md:my-30 md:px-16`}>
-        <SplideTrack className="md:overflow-visible!">
-          {frontProjets.map((projet) => (
-            <SplideSlide key={projet.id} className="flex justify-center items-center">
-              <Card_projet dataProjets={projet} onClick={() => handleOpen(projet)} context="projets" />
-            </SplideSlide>
-          ))}
-        </SplideTrack>
-        <div className="splide__arrows">
-          <IoIosArrowBack className="splide__arrow splide__arrow--prev h-15 w-15 cursor-pointer fill-[#EDF2F4] shrink-0 absolute left-0 top-1/2 -translate-y-1/2 z-10" />
-          <IoIosArrowForward className="splide__arrow splide__arrow--next h-15 w-15 cursor-pointer fill-[#EDF2F4] shrink-0 absolute right-0 top-1/2 -translate-y-1/2 z-10" />
-        </div>
-      </Splide>
+        <Splide hasTrack={false} options={{
+          type: 'slide',
+          perPage: 5,
+          perMove: 1,
+          arrows: frontProjets.length > 5,
+          drag: frontProjets.length > 1,
+          pagination: false,
+          trimSpace: false,
+          rewind: false,
+          updateOnMove: true,
+          focus: 'center',
+          breakpoints: {
+            1280: { perPage: 4, arrows: frontProjets.length > 4 },
+            1024: { perPage: 3, arrows: frontProjets.length > 3 },
+            768: { perPage: 1, arrows: frontProjets.length > 1 },
+          }
+        }} className={`${frontProjets.length > 5 ? '' : 'splide-centered'} h-auto md:h-100 mb-16 md:mb-25 text-white overflow-x-clip md:overflow-visible py-8 md:my-30 md:px-16"`}
+           onMoved={(splide) => handleSplideMove(splide, setFrontArrows, frontProjets.length)}
+           onMounted={(splide) => handleSplideMove(splide, setFrontArrows, frontProjets.length)}>
+          <SplideTrack className="md:overflow-visible!">
+            {frontProjets.map((projet) => (
+              <SplideSlide key={projet.id} className="front-slide">
+                <Card_projet dataProjets={projet} onClick={() => handleOpen(projet)} context="projets" />
+              </SplideSlide>
+            ))}
+          </SplideTrack>
+          <div className="splide__arrows">
+            <IoIosArrowBack className={`splide__arrow splide__arrow--prev h-15 w-15 cursor-pointer fill-[#EDF2F4] shrink-0 absolute left-0 top-1/2 -translate-y-1/2 z-10 ${!frontArrows.prev ? 'arrow-hidden' : ''}`} />
+            <IoIosArrowForward className={`splide__arrow splide__arrow--next h-15 w-15 cursor-pointer fill-[#EDF2F4] shrink-0 absolute right-0 top-1/2 -translate-y-1/2 z-10 ${!frontArrows.next ? 'arrow-hidden' : ''}`} />
+          </div>
+        </Splide>
       </div>
 
       <Box className="w-full relative mt-8 md:mt-0">
@@ -123,7 +150,7 @@ function Projets() {
         arrows: fullstackProjets.length > 5,
         drag: fullstackProjets.length > 1,
         pagination: false,
-        trimSpace: true,
+        trimSpace: false,
         rewind: false,
         updateOnMove: true,
         breakpoints: {
@@ -131,7 +158,9 @@ function Projets() {
           1024: { perPage: 3, focus: 'center', arrows: fullstackProjets.length > 3 },
           768: { perPage: 1, focus: 'center', arrows: fullstackProjets.length > 1 },
         }
-      }} className={`${fullstackProjets.length > 5 ? 'splide-space-between' : 'splide-centered ml-8'} h-auto md:h-100 mb-16 md:mb-25 text-white overflow-x-clip md:overflow-visible py-8 md:my-30 md:px-16`}>
+      }} className={`${fullstackProjets.length > 5 ? '' : 'splide-centered md:ml-12!'} justify-center h-auto md:h-100 mb-16 md:mb-25 text-white overflow-x-clip md:overflow-visible py-8 md:my-30 md:px-16"`}
+         onMoved={(splide) => handleSplideMove(splide, setFullstackArrows, fullstackProjets.length)}
+         onMounted={(splide) => handleSplideMove(splide, setFullstackArrows, fullstackProjets.length)}>
         <SplideTrack className="md:overflow-visible!">
           {fullstackProjets.map((projet) => (
             <SplideSlide key={projet.id} className="flex justify-center items-center">
@@ -140,8 +169,8 @@ function Projets() {
           ))}
         </SplideTrack>
         <div className="splide__arrows">
-          <IoIosArrowBack className="splide__arrow splide__arrow--prev h-15 w-15 cursor-pointer fill-[#EDF2F4] shrink-0 absolute left-0 top-1/2 -translate-y-1/2 z-10" />
-          <IoIosArrowForward className="splide__arrow splide__arrow--next h-15 w-15 cursor-pointer fill-[#EDF2F4] shrink-0 absolute right-0 top-1/2 -translate-y-1/2 z-10" />
+          <IoIosArrowBack className={`splide__arrow splide__arrow--prev h-15 w-15 cursor-pointer fill-[#EDF2F4] shrink-0 absolute left-0 top-1/2 -translate-y-1/2 z-10 ${!fullstackArrows.prev ? 'arrow-hidden' : ''}`} />
+          <IoIosArrowForward className={`splide__arrow splide__arrow--next h-15 w-15 cursor-pointer fill-[#EDF2F4] shrink-0 absolute right-0 top-1/2 -translate-y-1/2 z-10 ${!fullstackArrows.next ? 'arrow-hidden' : ''}`} />
         </div>
       </Splide>
       </div>
@@ -160,7 +189,7 @@ function Projets() {
         arrows: designProjets.length > 5,
         drag: designProjets.length > 1,
         pagination: false,
-        trimSpace: true,
+        trimSpace: false,
         rewind: false,
         updateOnMove: true,
         breakpoints: {
@@ -168,7 +197,9 @@ function Projets() {
           1024: { perPage: 3, focus: 'center', arrows: designProjets.length > 3 },
           768: { perPage: 1, focus: 'center', arrows: designProjets.length > 1 },
         }
-      }} className={`${designProjets.length > 5 ? 'splide-space-between' : 'splide-centered ml-8'} h-auto md:h-100 mb-16 md:mb-25 text-white overflow-x-clip md:overflow-visible py-8 md:my-30 md:px-16`}>
+      }} className={`${designProjets.length > 5 ? '' : 'splide-centered md:ml-13'} h-auto md:h-100 mb-16 md:mb-25 text-white overflow-x-clip md:overflow-visible py-8 md:my-30 md:px-16`}
+         onMoved={(splide) => handleSplideMove(splide, setDesignArrows, designProjets.length)}
+         onMounted={(splide) => handleSplideMove(splide, setDesignArrows, designProjets.length)}>
         <SplideTrack className="md:overflow-visible!">
           {designProjets.map((projet) => (
             <SplideSlide key={projet.id} className="flex justify-center items-center">
@@ -177,8 +208,8 @@ function Projets() {
           ))}
         </SplideTrack>
         <div className="splide__arrows">
-          <IoIosArrowBack className="splide__arrow splide__arrow--prev h-15 w-15 cursor-pointer fill-[#EDF2F4] shrink-0 absolute left-0 top-1/2 -translate-y-1/2 z-10" />
-          <IoIosArrowForward className="splide__arrow splide__arrow--next h-15 w-15 cursor-pointer fill-[#EDF2F4] shrink-0 absolute right-0 top-1/2 -translate-y-1/2 z-10" />
+          <IoIosArrowBack className={`splide__arrow splide__arrow--prev h-15 w-15 cursor-pointer fill-[#EDF2F4] shrink-0 absolute left-0 top-1/2 -translate-y-1/2 z-10 ${!designArrows.prev ? 'arrow-hidden' : ''}`} />
+          <IoIosArrowForward className={`splide__arrow splide__arrow--next h-15 w-15 cursor-pointer fill-[#EDF2F4] shrink-0 absolute right-0 top-1/2 -translate-y-1/2 z-10 ${!designArrows.next ? 'arrow-hidden' : ''}`} />
         </div>
       </Splide>
       </div>

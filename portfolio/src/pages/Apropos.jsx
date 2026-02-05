@@ -3,7 +3,7 @@ import CssLogo from '../components/CssLogo';
 import JsLogo from '../components/JsLogo';
 import ReactLogo from '../components/ReactLogo';
 import PhpLogo from '../components/PhpLogo';
-import NodejsLogo from '../components/NodeJsLogo';
+import NodeJsLogo from '../components/NodeJsLogo';
 import BootstrapLogo from '../components/BootstrapLogo';
 import GitLogo from '../components/GitLogo';
 import TypescriptLogo from '../components/TypescriptLogo';
@@ -214,7 +214,7 @@ function Apropos() {
 
       <div className="mx-4 md:mx-50 mt-30">
         <h2 className="font-['KronaOne-Regular'] text-[1.2rem] mb-10 text-left">Langages :</h2>
-        <div className="flex flex-row justify-center gap-x-12 gap-y-12 pb-4">
+        <div className="flex flex-wrap md:flex-nowrap justify-center gap-x-12 gap-y-12 pb-4">
           <div className="flex flex-col gap-8 md:gap-20 justify-center items-center">
             <div className="hover:scale-110 transition-transform cursor-pointer" style={{ transform: 'rotate(-10deg)' }}>
               <SplideJsLogo className="w-12 h-12 md:w-16 md:h-16" />
@@ -253,19 +253,29 @@ function Apropos() {
               <TypescriptLogo className="w-12 h-12 md:w-16 md:h-16" />
             </div>
           </div>
-          <div className="hover:scale-110 transition-transform cursor-pointer flex items-center justify-center">
-            <AngularLogo className="w-12 h-12 md:w-16 md:h-16" />
+          <div className="flex flex-col gap-8 md:gap-20 justify-center items-center">
+            <div className="hover:scale-110 transition-transform cursor-pointer" style={{ transform: 'rotate(-10deg)' }}>
+              <AngularLogo className="w-12 h-12 md:w-16 md:h-16" />
+            </div>
+            <div className="hover:scale-110 transition-transform cursor-pointer" style={{ transform: 'rotate(10deg)' }}>
+              <ChartJsLogo className="w-12 h-12 md:w-16 md:h-16" />
+            </div>
           </div>
           <div className="flex flex-col gap-8 md:gap-20 justify-center items-center">
             <div className="hover:scale-110 transition-transform cursor-pointer" style={{ transform: 'rotate(-10deg)' }}>
-              <ChartJsLogo className="w-12 h-12 md:w-16 md:h-16" />
-            </div>
-            <div className="hover:scale-110 transition-transform cursor-pointer" style={{ transform: 'rotate(10deg)' }}>
               <PythonLogo className="w-12 h-12 md:w-16 md:h-16" />
             </div>
+            <div className="hover:scale-110 transition-transform cursor-pointer" style={{ transform: 'rotate(10deg)' }}>
+              <SymfonyLogo className="w-12 h-12 md:w-16 md:h-16" />
+            </div>
           </div>
-          <div className="hover:scale-110 transition-transform cursor-pointer flex items-center justify-center">
-            <NodejsLogo className="w-12 h-12 md:w-16 md:h-16" />
+          <div className="flex flex-col gap-8 md:gap-20 justify-center items-center">
+            <div className="hover:scale-110 transition-transform cursor-pointer" style={{ transform: 'rotate(10deg)' }}>
+              <NodeJsLogo className="w-12 h-12 md:w-16 md:h-16" />
+            </div>
+            <div className="hover:scale-110 transition-transform cursor-pointer" style={{ transform: 'rotate(-10deg)' }}>
+              <ExpressJsLogo className="w-12 h-12 md:w-16 md:h-16 fill-white" />
+            </div>
           </div>
           <div className="flex flex-col gap-8 md:gap-20 justify-center items-center">
             <div className="hover:scale-110 transition-transform cursor-pointer" style={{ transform: 'rotate(-10deg)' }}>
@@ -288,7 +298,7 @@ function Apropos() {
 
       <div className="mx-4 md:mx-50 mt-30">
         <h2 className="font-['KronaOne-Regular'] text-[1.2rem] mb-10 text-left">Logiciels :</h2>
-        <div className="flex flex-row justify-center gap-x-12 gap-y-12 pb-4">
+        <div className="flex flex-wrap md:flex-nowrap justify-center gap-x-12 gap-y-12 pb-4">
           <div className="flex flex-col gap-8 md:gap-20 justify-center items-center">
             <div className="hover:scale-110 transition-transform cursor-pointer" style={{ transform: 'rotate(-10deg)' }}>
               <GoogleLogo className="w-12 h-12 md:w-16 md:h-16" />
