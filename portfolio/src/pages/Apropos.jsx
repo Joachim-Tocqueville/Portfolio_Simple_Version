@@ -3,7 +3,7 @@ import CssLogo from '../components/CssLogo';
 import JsLogo from '../components/JsLogo';
 import ReactLogo from '../components/ReactLogo';
 import PhpLogo from '../components/PhpLogo';
-import NodeJsLogo from '../components/NodeJsLogo';
+import NodeJSLogo from '../components/NodeJSLogo';
 import BootstrapLogo from '../components/BootstrapLogo';
 import GitLogo from '../components/GitLogo';
 import TypescriptLogo from '../components/TypescriptLogo';
@@ -271,7 +271,7 @@ function Apropos() {
           </div>
           <div className="flex flex-col gap-8 md:gap-20 justify-center items-center">
             <div className="hover:scale-110 transition-transform cursor-pointer" style={{ transform: 'rotate(10deg)' }}>
-              <NodeJsLogo className="w-12 h-12 md:w-16 md:h-16" />
+              <NodeJSLogo className="w-12 h-12 md:w-16 md:h-16" />
             </div>
             <div className="hover:scale-110 transition-transform cursor-pointer" style={{ transform: 'rotate(-10deg)' }}>
               <ExpressJsLogo className="w-12 h-12 md:w-16 md:h-16 fill-white" />
