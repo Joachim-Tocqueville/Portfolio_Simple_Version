@@ -133,7 +133,6 @@ function Apropos() {
                 <span className="flex flex-col md:flex-col items-center justify-center gap-1 md:gap-2">
                   <span className="flex items-center gap-2">
                     Bac STI2D<br className="hidden md:block" /> option SIN
-                    {/* Ampoule visible uniquement sur desktop à côté du texte */}
                     <button onClick={() => setIsModalOpen(true)} className="hidden md:inline-block cursor-pointer bg-transparent border-none p-1 transition-transform hover:scale-110 group/bulb" aria-label="Découvrir le projet Destin Brisé">
                       <svg className="w-8 h-8 text-white drop-shadow-[0_0_8px_rgba(255,255,255,0.6)] group-hover/bulb:drop-shadow-[0_0_15px_rgba(255,255,255,1)] transition-all" viewBox="0 0 24 24" fill="currentColor">
                         <style>{`
@@ -151,7 +150,6 @@ function Apropos() {
                       </svg>
                     </button>
                   </span>
-                  {/* Ampoule visible uniquement sur mobile sous le texte */}
                   <button onClick={() => setIsModalOpen(true)} className="md:hidden cursor-pointer bg-transparent border-none p-3 -m-2 transition-transform hover:scale-110 active:scale-95 group/bulb" aria-label="Découvrir le projet Destin Brisé">
                     <svg className="w-8 h-8 text-white drop-shadow-[0_0_10px_rgba(255,255,255,0.8)] transition-all" viewBox="0 0 24 24" fill="currentColor">
                       <g className="bulb-icon">
@@ -272,7 +270,7 @@ function Apropos() {
                 </div>
 
                 <div className="flex px-2 md:px-20 lg:px-40 text-center font-['PlusJakartaSans-Regular']">
-                  <p className="text-gray-300 text-sm md:text-base">Durant mon année de terminale, j'ai participé à la création d'un jeu vidéo sur <b>RPG Maker MV</b>.<br /> <b><i>Destin brisé</i></b> raconte l'histoire d'une jeune fille qui se fait harceler à l'école et qui décide d'utiliser l'art pour leur échapper ainsi qu'à ses démons. C'est un jeu à choix multiples où chaque décision mène à une fin différente. <b><i>Attention : Le site hébergeant ce jeu n'est pas sécurisé mais il est sans danger car vous n'avez pas à y entrer d'informations personnelles. Si vous voulez éviter tout risque, veuillez vous mettre en navigation privée, comme cela aucune information ne pourra être collectée.</i></b></p>
+                  <p className="text-gray-300 text-sm md:text-base">Durant mon année de terminale, j'ai participé à la création d'un jeu vidéo sur <b>RPG Maker MV</b>.<br /> <b><i>Destin brisé</i></b> raconte l'histoire d'une jeune fille qui se fait harceler à l'école et qui décide d'utiliser l'art pour s'exprimer. C'est un jeu à choix multiples où chaque décision mène à une fin différente. Mais gare à vous, car les choix que vous ferez auront des conséquences, parfois graves. <b><i>Attention : Le site hébergeant ce jeu n'est pas sécurisé mais il est sans danger car vous n'avez pas à y entrer d'informations personnelles. Si vous voulez éviter tout risque, veuillez vous mettre en navigation privée, comme cela aucune information ne pourra être collectée.</i></b></p>
                 </div>
 
                 <div className="flex justify-center mt-2 md:mt-4 mb-2">
