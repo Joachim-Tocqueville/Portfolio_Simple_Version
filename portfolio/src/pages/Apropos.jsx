@@ -37,13 +37,16 @@ import SplideJSLogo from '../components/SplideJSLogo';
 import SymfonyLogo from '../components/SymfonyLogo';
 import ExpressJSLogo from '../components/ExpressJSLogo';
 import CerveauPixelise from '../assets/imgs/Cerveau_pixelisé.png';
+import DestinBriseImg from '../assets/imgs/Destin_brisé.webp';
 import CVDeveloppeur from '../assets/pdf/CV_Developpeur.pdf';
 import CVDesigner from '../assets/pdf/CV_Designer.pdf';
 import { useState, useEffect } from 'react';
+import { Modal, Box, IconButton, Typography, Button, CardMedia } from '@mui/material';
 
 function Apropos() {
   const [animate, setAnimate] = useState(false);
   const [showYear, setShowYear] = useState(false);
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -126,7 +129,38 @@ function Apropos() {
             </div>
 
             <div className="flex flex-row md:flex-col items-center justify-center md:justify-start w-full relative group -mt-25.5 md:mt-0 pointer-events-none">
-              <div className="order-3 md:order-0 w-1/3 md:w-full text-[1.5rem] md:h-32 md:flex md:items-end md:text-[2rem] lg:text-[2.2rem] justify-center md:text-center items-baseline! leading-none mb-0 md:mb-8 pl-4 md:pl-0 pointer-events-auto">Bac STI2D<br className="hidden md:block" /> option SIN</div>
+              <div className="order-3 md:order-0 w-1/3 md:w-full text-[1.5rem] md:h-32 md:flex md:items-end md:text-[2rem] lg:text-[2.2rem] justify-center md:text-center items-baseline! leading-none mb-0 md:mb-8 pl-4 md:pl-0 pointer-events-auto">
+                <span className="flex flex-col md:flex-col items-center justify-center gap-1 md:gap-2">
+                  <span className="flex items-center gap-2">
+                    Bac STI2D<br className="hidden md:block" /> option SIN
+                    {/* Ampoule visible uniquement sur desktop à côté du texte */}
+                    <button onClick={() => setIsModalOpen(true)} className="hidden md:inline-block cursor-pointer bg-transparent border-none p-1 transition-transform hover:scale-110 group/bulb" aria-label="Découvrir le projet Destin Brisé">
+                      <svg className="w-8 h-8 text-white drop-shadow-[0_0_8px_rgba(255,255,255,0.6)] group-hover/bulb:drop-shadow-[0_0_15px_rgba(255,255,255,1)] transition-all" viewBox="0 0 24 24" fill="currentColor">
+                        <style>{`
+                          @keyframes bulb-glow {
+                            0%, 100% { opacity: 0.7; }
+                            50% { opacity: 1; }
+                          }
+                          .bulb-icon {
+                            animation: bulb-glow 2s ease-in-out infinite;
+                          }
+                        `}</style>
+                        <g className="bulb-icon">
+                          <path d="M9 21c0 .55.45 1 1 1h4c.55 0 1-.45 1-1v-1H9v1zm3-19C8.14 2 5 5.14 5 9c0 2.38 1.19 4.47 3 5.74V17c0 .55.45 1 1 1h6c.55 0 1-.45 1-1v-2.26c1.81-1.27 3-3.36 3-5.74 0-3.86-3.14-7-7-7zm2.85 11.1l-.85.6V16h-4v-2.3l-.85-.6A4.997 4.997 0 0 1 7 9c0-2.76 2.24-5 5-5s5 2.24 5 5c0 1.63-.8 3.16-2.15 4.1z" />
+                        </g>
+                      </svg>
+                    </button>
+                  </span>
+                  {/* Ampoule visible uniquement sur mobile sous le texte */}
+                  <button onClick={() => setIsModalOpen(true)} className="md:hidden cursor-pointer bg-transparent border-none p-1 transition-transform hover:scale-110 active:scale-95 group/bulb" aria-label="Découvrir le projet Destin Brisé">
+                    <svg className="w-7 h-7 text-white drop-shadow-[0_0_10px_rgba(255,255,255,0.8)] transition-all" viewBox="0 0 24 24" fill="currentColor">
+                      <g className="bulb-icon">
+                        <path d="M9 21c0 .55.45 1 1 1h4c.55 0 1-.45 1-1v-1H9v1zm3-19C8.14 2 5 5.14 5 9c0 2.38 1.19 4.47 3 5.74V17c0 .55.45 1 1 1h6c.55 0 1-.45 1-1v-2.26c1.81-1.27 3-3.36 3-5.74 0-3.86-3.14-7-7-7zm2.85 11.1l-.85.6V16h-4v-2.3l-.85-.6A4.997 4.997 0 0 1 7 9c0-2.76 2.24-5 5-5s5 2.24 5 5c0 1.63-.8 3.16-2.15 4.1z" />
+                      </g>
+                    </svg>
+                  </button>
+                </span>
+              </div>
               <div className="order-2 md:order-0 w-20 h-60 md:w-full md:h-17! lg:h-26 rotate-90 md:rotate-0 flex md:block justify-center items-center drop-shadow-[0_0_15px_rgba(255,255,255,0.3)] hover:drop-shadow-[0_0_25px_rgba(255,255,255,0.6)] transition-all pointer-events-auto">
                 <a href="https://www.larmand.fr" target="_blank" rel="noopener noreferrer" className="block w-60 h-16 md:w-full md:h-full group/link">
                   <svg width="100%" height="100%" viewBox="0 0 200 60" preserveAspectRatio="none" className="overflow-visible w-24 md:w-full">
@@ -208,6 +242,47 @@ function Apropos() {
               <div className="order-1 md:order-0 w-1/3 md:w-full text-[1.5rem] md:text-[2.2rem] lg:text-[2.8rem] text-right md:text-center mt-0 md:mt-8 pr-4 md:pr-0 pointer-events-auto">?</div>
             </div>
           </div>
+
+          <Modal open={isModalOpen} onClose={() => setIsModalOpen(false)} aria-labelledby="modal-destin-brise" className="flex items-center justify-center backdrop-blur-sm">
+            <Box className="relative bg-[#251949] border-3 md:border-5 border-[#2D327D] w-[95%] md:w-[70%] max-h-[90%] overflow-y-auto p-4 md:p-8 text-[#EDF2F4] outline-none shadow-2xl">
+              <IconButton onClick={() => setIsModalOpen(false)} className="absolute! top-2! right-2! md:top-5! md:right-4! text-[#EDF2F4]! hover:bg-white/10! z-10! rounded-none!">
+                <svg viewBox="0 0 5 5" className="w-4! h-4! md:w-8! md:h-8! fill-current" shapeRendering="crispEdges">
+                  <rect x="0" y="0" width="1" height="1" />
+                  <rect x="4" y="0" width="1" height="1" />
+                  <rect x="1" y="1" width="1" height="1" />
+                  <rect x="3" y="1" width="1" height="1" />
+                  <rect x="2" y="2" width="1" height="1" />
+                  <rect x="1" y="3" width="1" height="1" />
+                  <rect x="3" y="3" width="1" height="1" />
+                  <rect x="0" y="4" width="1" height="1" />
+                  <rect x="4" y="4" width="1" height="1" />
+                </svg>
+              </IconButton>
+
+              <Typography id="modal-destin-brise" component="h2" variant="h3" className="text-center text-[1.3rem]! md:text-[2.5rem]! font-['KronaOne-Regular']! px-4 mt-5! mb-6! md:mb-15!">Destin Brisé</Typography>
+
+              <div className="flex flex-col gap-6 md:gap-10 items-center">
+                <div className="relative h-48 sm:h-64 md:h-88 lg:h-120 w-full flex flex-col rounded-xl md:rounded-3xl overflow-hidden shadow-2xl">
+                  <div className="bg-white text-black font-['PlusJakartaSans-Regular'] text-sm md:text-xl py-2 md:py-3 px-3 md:px-4 w-full text-center z-20 shadow-md">
+                    Développeur et sound designer
+                  </div>
+                  <div className="relative grow w-full h-full min-h-0">
+                    <CardMedia component="img" image={DestinBriseImg} alt="Destin Brisé" className="w-full h-full absolute inset-0" style={{ objectFit: 'contain' }} />
+                  </div>
+                </div>
+
+                <div className="flex px-2 md:px-20 lg:px-40 text-center font-['PlusJakartaSans-Regular']">
+                  <p className="text-gray-300 text-sm md:text-base">Durant mon année de terminale, j'ai participé à la création d'un jeu vidéo sur <b>RPG Maker MV</b>.<br /> <b><i>Destin brisé</i></b> raconte l'histoire d'une jeune fille qui se fait harceler à l'école et qui décide d'utiliser l'art pour leur échapper ainsi qu'à ses démons. C'est un jeu à choix multiples où chaque décision mène à une fin différente.</p>
+                </div>
+
+                <div className="flex justify-center mt-2 md:mt-4 mb-2">
+                  <Button className="h-9 md:h-10 w-20 md:w-24 px-6 md:px-8 rounded-full! cursor-pointer! bg-radial from-[#F7CC1F] to-[#E75F0B] text-[#901616]! text-[0.8rem]! md:text-[0.9rem]! normal-case! font-['PlusJakartaSans-Regular']!">
+                    <a href="http://prophil.larmand.fr/wordpress/destin-brise/" target="_blank" rel="noopener noreferrer">Jouer</a>
+                  </Button>
+                </div>
+              </div>
+            </Box>
+          </Modal>
         </div>
       </div>
 
@@ -377,7 +452,7 @@ function Apropos() {
           <button className="h-10 w-30 md:w-35 rounded-full bg-radial from-[#F7CC1F] to-[#E75F0B] text-[#901616] font-['PlusJakartaSans-Regular'] cursor-pointer border-none">CV designer</button>
         </a>
       </div>
-    </div >
+    </div>
   )
 }
 
